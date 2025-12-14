@@ -1,0 +1,95 @@
+@page "/register"
+@using VAL.Client.DTOs
+@using VAL.Client.Services
+@layout Layout.AuthLayout
+@inject IAuthService AuthService
+@inject NavigationManager NavigationManager
+
+<div class="bg-white p-8 rounded-lg shadow-lg">
+    <div class="text-center mb-8">
+        <h2 class="text-3xl font-extrabold text-gray-900">Create your account</h2>
+        <p class="mt-2 text-sm text-gray-600">
+            Already have an account?
+            <a href="login" class="font-medium text-indigo-600 hover:text-indigo-500">
+                Sign in
+            </a>
+        </p>
+    </div>
+
+    @if (!string.IsNullOrEmpty(ErrorMessage))
+    {
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+            <span class="block sm:inline">@ErrorMessage</span>
+        </div>
+    }
+
+    <EditForm Model="@registerModel" OnValidSubmit="HandleRegistration">
+        <DataAnnotationsValidator />
+
+        <div class="space-y-6">
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                <div class="mt-1">
+                    <InputText id="username" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" 
+                              @bind-Value="registerModel.UserName" placeholder="johndoe" />
+                    <ValidationMessage For="@(() => registerModel.UserName)" class="text-red-500 text-xs mt-1" />
+                </div>
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                <div class="mt-1">
+                    <InputText id="email" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" 
+                              @bind-Value="registerModel.Email" placeholder="you@example.com" />
+                    <ValidationMessage For="@(() => registerModel.Email)" class="text-red-500 text-xs mt-1" />
+                </div>
+            </div>
+
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <div class="mt-1">
+                    <InputText type="password" id="password" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" 
+                              @bind-Value="registerModel.Password" placeholder="••••••••" />
+                    <ValidationMessage For="@(() => registerModel.Password)" class="text-red-500 text-xs mt-1" />
+                </div>
+            </div>
+
+            <div>
+                <label for="confirmPassword" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                <div class="mt-1">
+                    <InputText type="password" id="confirmPassword" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" 
+                              @bind-Value="registerModel.ConfirmPassword" placeholder="••••••••" />
+                    <ValidationMessage For="@(() => registerModel.ConfirmPassword)" class="text-red-500 text-xs mt-1" />
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                        <i class="fas fa-user-plus text-indigo-500 group-hover:text-indigo-400"></i>
+                    </span>
+                    Register
+                </button>
+            </div>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+    private RegisterDto registerModel = new RegisterDto();
+    private string ErrorMessage = string.Empty;
+
+    private async Task HandleRegistration()
+    {
+        try
+        {
+            ErrorMessage = string.Empty;
+            await AuthService.Register(registerModel);
+            NavigationManager.NavigateTo("/login");
+        }
+        catch (Exception ex)
+        {
+            ErrorMessage = ex.Message;
+        }
+    }
+}

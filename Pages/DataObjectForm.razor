@@ -1,0 +1,169 @@
+@page "/dataobjects/create"
+@page "/dataobjects/edit/{Id:guid}"
+@page "/dataobjects/view/{Id:guid}"
+@attribute [Authorize]
+@using VAL.Client.DTOs
+@using VAL.Client.Services
+@inject IDataObjectService DataObjectService
+@inject NavigationManager NavigationManager
+
+<PageTitle>@(IsEditMode ? "Edit Data Object" : IsViewMode ? "View Data Object" : "Create Data Object")</PageTitle>
+
+<div class="max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold text-slate-900 tracking-tight">@(IsEditMode ? "Edit Data Object" : IsViewMode ? "View Data Object" : "Create Data Object")</h1>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/60 overflow-hidden border border-slate-100">
+        <EditForm Model="@dataObject" OnValidSubmit="HandleSubmit">
+            <DataAnnotationsValidator />
+            
+            <fieldset disabled="@IsViewMode" class="group">
+                <div class="p-8 space-y-8">
+                    @if (errorMessage != null)
+                    {
+                        <div class="rounded-xl bg-red-50 border border-red-100 p-4 flex items-start gap-3">
+                            <i class="fas fa-exclamation-circle text-red-400 text-xl mt-0.5"></i>
+                            <div>
+                                <h3 class="text-sm font-medium text-red-800">Error saving data</h3>
+                                <p class="text-sm text-red-700 mt-1">@errorMessage</p>
+                            </div>
+                        </div>
+                    }
+
+                    <div class="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                        <div class="sm:col-span-4">
+                            <label for="shortName" class="block text-sm font-semibold text-slate-700 mb-1 group-disabled:text-slate-500">
+                                Short Name <span class="text-red-500 group-disabled:hidden">*</span>
+                            </label>
+                            <div class="relative">
+                                <InputText id="shortName" @bind-Value="dataObject.DataObjectShortName" 
+                                          class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200" 
+                                          placeholder="e.g., CustOrder" />
+                            </div>
+                            <ValidationMessage For="@(() => dataObject.DataObjectShortName)" class="text-red-500 text-xs mt-1" />
+                        </div>
+
+                        <div class="sm:col-span-6">
+                            <label for="longName" class="block text-sm font-semibold text-slate-700 mb-1 group-disabled:text-slate-500">
+                                Long Name <span class="text-red-500 group-disabled:hidden">*</span>
+                            </label>
+                            <div class="relative">
+                                <InputText id="longName" @bind-Value="dataObject.DataObjectLongName" 
+                                          class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200" 
+                                          placeholder="e.g., Customer Order Details" />
+                            </div>
+                            <ValidationMessage For="@(() => dataObject.DataObjectLongName)" class="text-red-500 text-xs mt-1" />
+                        </div>
+
+                        <div class="sm:col-span-6 pt-2">
+                            <div class="flex items-start">
+                                <div class="flex h-6 items-center">
+                                    <InputCheckbox id="active" @bind-Value="dataObject.DataObjectActive" 
+                                                  class="h-5 w-5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 transition-colors cursor-pointer disabled:text-slate-400 disabled:cursor-default" />
+                                </div>
+                                <div class="ml-3 text-sm leading-6">
+                                    <label for="active" class="font-medium text-slate-900 cursor-pointer group-disabled:text-slate-500 group-disabled:cursor-default">Active Status</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <div class="bg-slate-50 px-8 py-5 flex items-center justify-end gap-3 border-t border-slate-100">
+                <button type="button" @onclick="Cancel" 
+                        class="rounded-xl border border-slate-300 bg-white py-2.5 px-5 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-200">
+                    @(IsViewMode ? "Back" : "Cancel")
+                </button>
+                @if (!IsViewMode)
+                {
+                    <button type="submit" disabled="@saving"
+                            class="inline-flex justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 py-2.5 px-5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:translate-y-[-1px] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200">
+                        @if (saving)
+                        {
+                            <span class="inline-flex items-center">
+                                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                Saving...
+                            </span>
+                        }
+                        else
+                        {
+                            <span>@(IsEditMode ? "Update Data Object" : "Create Data Object")</span>
+                        }
+                    </button>
+                }
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Guid? Id { get; set; }
+
+    private DataObjectDto dataObject = new();
+    private bool saving = false;
+    private string? errorMessage;
+    private bool IsEditMode => Id.HasValue && !IsViewMode;
+    private bool IsViewMode => NavigationManager.Uri.Contains("/view/");
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (IsEditMode || IsViewMode)
+        {
+            try
+            {
+                var existing = await DataObjectService.GetByIdAsync(Id!.Value);
+                if (existing != null)
+                {
+                    dataObject = existing;
+                }
+                else
+                {
+                    errorMessage = "Data object not found";
+                }
+            }
+            catch (Exception ex)
+            {
+                errorMessage = $"Error loading data object: {ex.Message}";
+            }
+        }
+    }
+
+    private async Task HandleSubmit()
+    {
+        try
+        {
+            saving = true;
+            errorMessage = null;
+
+            if (IsEditMode)
+            {
+                await DataObjectService.UpdateAsync(Id!.Value, dataObject);
+            }
+            else
+            {
+                await DataObjectService.CreateAsync(dataObject);
+            }
+
+            NavigationManager.NavigateTo("/dataobjects");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error saving data object: {ex.Message}";
+        }
+        finally
+        {
+            saving = false;
+        }
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/dataobjects");
+    }
+}

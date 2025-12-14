@@ -1,0 +1,298 @@
+@page "/dataobjectscolumns"
+@attribute [Authorize]
+@using VAL.Client.DTOs
+@using VAL.Client.Services
+@inject IDataObjectColumnService DataObjectColumnService
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
+@inject IScreenLoadLogService ScreenLoadLogService
+
+<PageTitle>Data Object Columns</PageTitle>
+
+<div class="px-4 sm:px-6 lg:px-8 py-6">
+    <!-- Header Section -->
+    <div class="sm:flex sm:items-center sm:justify-between mb-8">
+        <div>
+            <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Data Object Columns</h1>
+            <p class="mt-2 text-sm text-slate-700">Manage fields and properties for your data objects.</p>
+        </div>
+        <div class="mt-4 sm:mt-0">
+            <button @onclick='() => NavigationManager.NavigateTo("dataobjectscolumns/create")' 
+                    class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:translate-y-[-1px] transition-all duration-200">
+                <i class="fas fa-plus"></i>
+                Create Data Object Column
+            </button>
+        </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="mb-6 bg-white rounded-xl shadow-sm border border-slate-200 p-4">
+        <div class="relative">
+            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                <i class="fas fa-search text-slate-400 text-sm"></i>
+            </div>
+            <input type="text" 
+                   @bind="searchTerm" 
+                   @bind:event="oninput"
+                   placeholder="Search columns or data objects..." 
+                   class="block w-full rounded-lg border-slate-300 pl-10 pr-3 py-2 text-sm focus:border-indigo-500 focus:ring-indigo-500" />
+        </div>
+    </div>
+
+    <!-- Data Grid -->
+    <div class="bg-white rounded-xl shadow-lg shadow-slate-200/60 border border-slate-100 overflow-hidden">
+        @if (loading)
+        {
+                <div class="flex items-center justify-center py-12">
+                    <div class="text-center">
+                        <svg class="animate-spin h-10 w-10 text-indigo-600 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <p class="text-sm text-slate-500">Loading columns...</p>
+                    </div>
+                </div>
+        }
+        else if (errorMessage != null)
+        {
+                <div class="p-8">
+                    <div class="rounded-xl bg-red-50 border border-red-100 p-4 flex items-start gap-3">
+                        <i class="fas fa-exclamation-circle text-red-400 text-xl mt-0.5"></i>
+                        <div>
+                            <h3 class="text-sm font-medium text-red-800">Error loading data</h3>
+                            <p class="text-sm text-red-700 mt-1">@errorMessage</p>
+                        </div>
+                    </div>
+                </div>
+        }
+        else if (!FilteredColumns.Any())
+        {
+                <div class="text-center py-12">
+                    <i class="fas fa-columns text-slate-300 text-5xl mb-4"></i>
+                    <h3 class="text-sm font-medium text-slate-900">No columns found</h3>
+                    <p class="mt-1 text-sm text-slate-500">Get started by adding a new column to a data object.</p>
+                    <div class="mt-6">
+                        <button @onclick='() => NavigationManager.NavigateTo("dataobjectscolumns/create")' 
+                                class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors">
+                            <i class="fas fa-plus"></i>
+                            Create Data Object Column
+                        </button>
+                    </div>
+                </div>
+        }
+        else
+        {
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-slate-200">
+                        <thead class="bg-slate-50">
+                            <tr>
+                                <th scope="col" @onclick='() => SortTable("DataObjectName")' class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider cursor-pointer hover:bg-slate-200 transition-colors select-none">
+                                    <div class="flex items-center gap-1">
+                                        Data Object
+                                        @if (currentSortColumn == "DataObjectName")
+                                        {
+                                            <i class="fas @(isAscending ? "fa-sort-up" : "fa-sort-down") text-indigo-500"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="fas fa-sort text-slate-300"></i>
+                                        }
+                                    </div>
+                                </th>
+                                <th scope="col" @onclick='() => SortTable("ColumnName")' class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider cursor-pointer hover:bg-slate-200 transition-colors select-none">
+                                    <div class="flex items-center gap-1">
+                                        Column Name
+                                        @if (currentSortColumn == "ColumnName")
+                                        {
+                                            <i class="fas @(isAscending ? "fa-sort-up" : "fa-sort-down") text-indigo-500"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="fas fa-sort text-slate-300"></i>
+                                        }
+                                    </div>
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">
+                                    Type
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">
+                                    Ordinal
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">
+                                    Status
+                                </th>
+                                <th scope="col" class="relative px-6 py-3">
+                                    <span class="sr-only">Actions</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-slate-200">
+                        @foreach (var item in FilteredColumns)
+                        {
+                                    <tr class="hover:bg-slate-50 transition-colors">
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="text-sm font-medium text-slate-900">@item.DataObjectName</div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="text-sm text-slate-900">@item.DataObjectColumnName</div>
+                                    @if (item.DataObjectColumnIsReqired == 1)
+                                    {
+                                                    <span class="text-xs text-red-500 font-medium">* Required</span>
+                                    }
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">
+                                        @item.DataObjectColumnDataType
+                                        @if (item.DataObjectColumnMaxLen > 0)
+                                        {
+                                                        <span class="ml-1">(@item.DataObjectColumnMaxLen)</span>
+                                        }
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="text-sm text-slate-500">@item.DataObjectColumnOrdinalPosition</div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                    @if (item.DataObjectColumnActive)
+                                    {
+                                                    <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">
+                                                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-600"></span>
+                                                        Active
+                                                    </span>
+                                    }
+                                    else
+                                    {
+                                                    <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">
+                                                        <span class="h-1.5 w-1.5 rounded-full bg-slate-600"></span>
+                                                        Inactive
+                                                    </span>
+                                    }
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                            <div class="flex items-center justify-end gap-2">
+                                                <button @onclick='() => NavigationManager.NavigateTo($"dataobjectscolumns/view/{item.DataObjectColumnGuid}")' 
+                                                        class="text-slate-500 hover:text-slate-800 transition-colors p-2 hover:bg-slate-100 rounded-lg">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button @onclick='() => NavigationManager.NavigateTo($"dataobjectscolumns/edit/{item.DataObjectColumnGuid}")' 
+                                                        class="text-indigo-600 hover:text-indigo-900 transition-colors p-2 hover:bg-indigo-50 rounded-lg">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button @onclick="() => DeleteColumn(item.DataObjectColumnGuid!.Value)" 
+                                                        class="text-red-600 hover:text-red-900 transition-colors p-2 hover:bg-red-50 rounded-lg">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination Info -->
+                <div class="bg-slate-50 px-6 py-4 border-t border-slate-200">
+                    <div class="text-sm text-slate-700">
+                        Showing <span class="font-medium">@FilteredColumns.Count()</span> of <span class="font-medium">@columns.Count</span> results
+                    </div>
+                </div>
+        }
+    </div>
+</div>
+
+@code {
+    private List<DataObjectColumnDto> columns = new();
+    private bool loading = true;
+    private string? errorMessage;
+    private string searchTerm = string.Empty;
+    private string currentSortColumn = "DataObjectName";
+    private bool isAscending = true;
+
+    private IEnumerable<DataObjectColumnDto> FilteredColumns
+    {
+        get
+        {
+            if (string.IsNullOrWhiteSpace(searchTerm))
+            {
+                var filtered = columns.AsEnumerable();
+                return ApplySort(filtered);
+            }
+
+            var search = searchTerm.ToLower();
+            var searchFiltered = columns.Where(c =>
+                (c.DataObjectName?.ToLower().Contains(search) ?? false) ||
+                c.DataObjectColumnName.ToLower().Contains(search) ||
+                c.DataObjectColumnDataType.ToLower().Contains(search)
+            );
+
+            return ApplySort(searchFiltered);
+        }
+    }
+
+    private IEnumerable<DataObjectColumnDto> ApplySort(IEnumerable<DataObjectColumnDto> items)
+    {
+        return currentSortColumn switch
+        {
+            "DataObjectName" => isAscending
+                ? items.OrderBy(c => c.DataObjectName).ThenBy(c => c.DataObjectColumnOrdinalPosition)
+                : items.OrderByDescending(c => c.DataObjectName).ThenBy(c => c.DataObjectColumnOrdinalPosition),
+            "ColumnName" => isAscending
+                ? items.OrderBy(c => c.DataObjectColumnName)
+                : items.OrderByDescending(c => c.DataObjectColumnName),
+            _ => items
+        };
+    }
+
+    private void SortTable(string columnName)
+    {
+        if (currentSortColumn == columnName)
+        {
+            isAscending = !isAscending;
+        }
+        else
+        {
+            currentSortColumn = columnName;
+            isAscending = true;
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ScreenLoadLogService.LogScreenLoadAsync("Data Object Columns", NavigationManager.Uri);
+        await LoadColumns();
+    }
+
+    private async Task LoadColumns()
+    {
+        try
+        {
+            loading = true;
+            errorMessage = null;
+            columns = await DataObjectColumnService.GetAllAsync();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading columns: {ex.Message}";
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+
+    private async Task DeleteColumn(Guid id)
+    {
+        if (await JSRuntime.InvokeAsync<bool>("confirm", "Are you sure you want to delete this column?"))
+        {
+            try
+            {
+                await DataObjectColumnService.DeleteAsync(id);
+                await LoadColumns();
+            }
+            catch (Exception ex)
+            {
+                errorMessage = $"Error deleting column: {ex.Message}";
+            }
+        }
+    }
+}

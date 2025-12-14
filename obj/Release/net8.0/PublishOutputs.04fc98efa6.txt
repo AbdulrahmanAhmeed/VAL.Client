@@ -1,0 +1,2 @@
+D:\ActiveProjs\VBL.Back\VAL.Client\obj\Release\net8.0\browser-wasm\PubTmp\Out\emcc-props.json
+D:\ActiveProjs\VBL.Back\VAL.Client\obj\Release\net8.0\browser-wasm\PubTmp\Out\web.config

@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Debug\\net8.0\\scopedcss\\bundle\\VAL.Client.styles.css",
+      "PackagePath": "staticwebassets\\VAL.Client.styles.css"
+    },
+    {
+      "Id": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.VAL.Client.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.VAL.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.VAL.Client.props",
+      "PackagePath": "build\\VAL.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.VAL.Client.props",
+      "PackagePath": "buildMultiTargeting\\VAL.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.VAL.Client.props",
+      "PackagePath": "buildTransitive\\VAL.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

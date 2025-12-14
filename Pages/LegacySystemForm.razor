@@ -1,0 +1,164 @@
+@page "/legacysystems/create"
+@page "/legacysystems/edit/{Id:guid}"
+@attribute [Authorize]
+@using VAL.Client.DTOs
+@using VAL.Client.Services
+@inject ILegacySystemService LegacySystemService
+@inject NavigationManager NavigationManager
+
+<PageTitle>@(IsEditMode ? "Edit Legacy System" : "Create Legacy System")</PageTitle>
+
+<div class="max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold text-slate-900 tracking-tight">@(IsEditMode ? "Edit Legacy System" : "New Legacy System")</h1>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/60 overflow-hidden border border-slate-100">
+        <EditForm Model="@legacySystem" OnValidSubmit="HandleSubmit">
+            <DataAnnotationsValidator />
+            
+            <div class="p-8 space-y-8">
+                @if (errorMessage != null)
+                {
+                    <div class="rounded-xl bg-red-50 border border-red-100 p-4 flex items-start gap-3">
+                        <i class="fas fa-exclamation-circle text-red-400 text-xl mt-0.5"></i>
+                        <div>
+                            <h3 class="text-sm font-medium text-red-800">Error saving data</h3>
+                            <p class="text-sm text-red-700 mt-1">@errorMessage</p>
+                        </div>
+                    </div>
+                }
+
+                <div class="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                    <div class="sm:col-span-6">
+                        <label for="systemName" class="block text-sm font-semibold text-slate-700 mb-1">
+                            System Name <span class="text-red-500">*</span>
+                        </label>
+                        <div class="relative">
+                            <InputText id="systemName" @bind-Value="legacySystem.LegacySystemName" 
+                                      class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors" 
+                                      placeholder="e.g., SAP ERP System" />
+                        </div>
+                        <ValidationMessage For="@(() => legacySystem.LegacySystemName)" class="text-red-500 text-xs mt-1" />
+                    </div>
+
+                    <div class="sm:col-span-6">
+                        <label for="description" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Description
+                        </label>
+                        <div class="relative">
+                            <InputTextArea id="description" @bind-Value="legacySystem.LegacySystemDescription" 
+                                          rows="4"
+                                          class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors" 
+                                          placeholder="Describe the legacy system, its purpose, and key details..." />
+                        </div>
+                        <ValidationMessage For="@(() => legacySystem.LegacySystemDescription)" class="text-red-500 text-xs mt-1" />
+                    </div>
+
+                    <div class="sm:col-span-6 pt-2">
+                        <div class="flex items-start">
+                            <div class="flex h-6 items-center">
+                                <InputCheckbox id="active" @bind-Value="legacySystem.LegacySystemActive" 
+                                              class="h-5 w-5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 transition-colors cursor-pointer" />
+                            </div>
+                            <div class="ml-3 text-sm leading-6">
+                                <label for="active" class="font-medium text-slate-900 cursor-pointer">Active Status</label>
+                                <p class="text-slate-500">System is currently in use</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-slate-50 px-8 py-5 flex items-center justify-end gap-3 border-t border-slate-100">
+                <button type="button" @onclick="Cancel" 
+                        class="rounded-xl border border-slate-300 bg-white py-2.5 px-5 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-200">
+                    Cancel
+                </button>
+                <button type="submit" disabled="@saving"
+                        class="inline-flex justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 py-2.5 px-5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:translate-y-[-1px] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200">
+                    @if (saving)
+                    {
+                        <span class="inline-flex items-center">
+                            <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            Saving...
+                        </span>
+                    }
+                    else
+                    {
+                        <span>@(IsEditMode ? "Update System" : "Create System")</span>
+                    }
+                </button>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Guid? Id { get; set; }
+
+    private LegacySystemDto legacySystem = new();
+    private bool saving = false;
+    private string? errorMessage;
+    private bool IsEditMode => Id.HasValue;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (IsEditMode)
+        {
+            try
+            {
+                var existing = await LegacySystemService.GetByIdAsync(Id!.Value);
+                if (existing != null)
+                {
+                    legacySystem = existing;
+                }
+                else
+                {
+                    errorMessage = "Legacy system not found";
+                }
+            }
+            catch (Exception ex)
+            {
+                errorMessage = $"Error loading legacy system: {ex.Message}";
+            }
+        }
+    }
+
+    private async Task HandleSubmit()
+    {
+        try
+        {
+            saving = true;
+            errorMessage = null;
+
+            if (IsEditMode)
+            {
+                await LegacySystemService.UpdateAsync(Id!.Value, legacySystem);
+            }
+            else
+            {
+                await LegacySystemService.CreateAsync(legacySystem);
+            }
+
+            NavigationManager.NavigateTo("/legacysystems");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error saving legacy system: {ex.Message}";
+        }
+        finally
+        {
+            saving = false;
+        }
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/legacysystems");
+    }
+}

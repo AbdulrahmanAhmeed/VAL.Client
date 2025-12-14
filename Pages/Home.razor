@@ -1,0 +1,277 @@
+﻿@page "/"
+@attribute [Authorize]
+@inject AuthenticationStateProvider AuthStateProvider
+@inject NavigationManager NavigationManager
+@inject VAL.Client.Services.IDataObjectService DataObjectService
+@inject VAL.Client.Services.ILegacySystemService LegacySystemService
+@inject VAL.Client.Services.IAuthService AuthService
+
+<PageTitle>Dashboard</PageTitle>
+<div class="px-4 sm:px-6 lg:px-8">
+    <!-- Welcome Section -->
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Dashboard</h1>
+        <AuthorizeView>
+            <Authorized>
+                <p class="mt-2 text-slate-500">Welcome back, <span
+                        class="font-semibold text-indigo-600">@context.User.Identity?.Name</span>! Here's what's
+                    happening with your system.</p>
+            </Authorized>
+        </AuthorizeView>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-8">
+        <!-- Data Objects Card -->
+        <a href="dataobjects"
+            class="relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg shadow-slate-200/60 border border-slate-100 group hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 cursor-pointer">
+            <dt>
+                <div class="absolute rounded-xl bg-indigo-500/10 p-3">
+                    <i class="fas fa-database text-indigo-600 text-xl"></i>
+                </div>
+                <p class="ml-16 truncate text-sm font-medium text-slate-500">Data Objects</p>
+            </dt>
+            <dd class="ml-16 flex items-baseline pb-1 sm:pb-2">
+                <p class="text-2xl font-semibold text-slate-900">@dataObjectCount</p>
+            </dd>
+            <div
+                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+            </div>
+        </a>
+
+        <!-- Data Object Columns Card -->
+        <a href="dataobjectscolumns"
+            class="relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg shadow-slate-200/60 border border-slate-100 group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 cursor-pointer">
+            <dt>
+                <div class="absolute rounded-xl bg-purple-500/10 p-3">
+                    <i class="fas fa-columns text-purple-600 text-xl"></i>
+                </div>
+                <p class="ml-16 truncate text-sm font-medium text-slate-500">Data Object Columns</p>
+            </dt>
+            <dd class="ml-16 flex items-baseline pb-1 sm:pb-2">
+                <p class="text-2xl font-semibold text-slate-900">@columnCount</p>
+            </dd>
+            <div
+                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+            </div>
+        </a>
+
+        <!-- Reports Card -->
+        <a href="reports"
+            class="relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg shadow-slate-200/60 border border-slate-100 group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
+            <dt>
+                <div class="absolute rounded-xl bg-blue-500/10 p-3">
+                    <i class="fas fa-file-alt text-blue-600 text-xl"></i>
+                </div>
+                <p class="ml-16 truncate text-sm font-medium text-slate-500">Reports</p>
+            </dt>
+            <dd class="ml-16 flex items-baseline pb-1 sm:pb-2">
+            </dd>
+            <div
+                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+            </div>
+        </a>
+
+        <!-- Legacy Systems Card -->
+        <a href="legacysystems"
+            class="relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg shadow-slate-200/60 border border-slate-100 group hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 cursor-pointer">
+            <dt>
+                <div class="absolute rounded-xl bg-orange-500/10 p-3">
+                    <i class="fas fa-server text-orange-600 text-xl"></i>
+                </div>
+                <p class="ml-16 truncate text-sm font-medium text-slate-500">Legacy Systems</p>
+            </dt>
+            <dd class="ml-16 flex items-baseline pb-1 sm:pb-2">
+                <p class="text-2xl font-semibold text-slate-900">@legacySystemCount</p>
+            </dd>
+            <div
+                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+            </div>
+        </a>
+
+        <!-- About Us Card -->
+        <a href="aboutus"
+            class="relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg shadow-slate-200/60 border border-slate-100 group hover:shadow-xl hover:shadow-teal-500/10 transition-all duration-300 cursor-pointer">
+            <dt>
+                <div class="absolute rounded-xl bg-teal-500/10 p-3">
+                    <i class="fas fa-info-circle text-teal-600 text-xl"></i>
+                </div>
+                <p class="ml-16 truncate text-sm font-medium text-slate-500">About Us</p>
+            </dt>
+            <dd class="ml-16 flex items-baseline pb-1 sm:pb-2">
+            </dd>
+            <div
+                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+            </div>
+        </a>
+
+        <!-- Contact Us Card -->
+        <a href="contactus"
+            class="relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg shadow-slate-200/60 border border-slate-100 group hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 cursor-pointer">
+            <dt>
+                <div class="absolute rounded-xl bg-emerald-500/10 p-3">
+                    <i class="fas fa-headset text-emerald-600 text-xl"></i>
+                </div>
+                <p class="ml-16 truncate text-sm font-medium text-slate-500">Contact Us</p>
+            </dt>
+            <dd class="ml-16 flex items-baseline pb-1 sm:pb-2">
+            </dd>
+            <div
+                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+            </div>
+        </a>
+
+        <!-- Settings Card -->
+        <a href="settings"
+            class="relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg shadow-slate-200/60 border border-slate-100 group hover:shadow-xl hover:shadow-slate-500/10 transition-all duration-300 cursor-pointer">
+            <dt>
+                <div class="absolute rounded-xl bg-slate-500/10 p-3">
+                    <i class="fas fa-cog text-slate-600 text-xl"></i>
+                </div>
+                <p class="ml-16 truncate text-sm font-medium text-slate-500">Settings</p>
+            </dt>
+            <dd class="ml-16 flex items-baseline pb-1 sm:pb-2">
+            </dd>
+            <div
+                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-slate-500 to-slate-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+            </div>
+        </a>
+
+        <!-- Logout Card -->
+        <button @onclick="HandleLogout"
+            class="relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg shadow-slate-200/60 border border-slate-100 group hover:shadow-xl hover:shadow-red-500/10 transition-all duration-300 cursor-pointer text-left">
+            <dt>
+                <div class="absolute rounded-xl bg-red-500/10 p-3">
+                    <i class="fas fa-sign-out-alt text-red-600 text-xl"></i>
+                </div>
+                <p class="ml-16 truncate text-sm font-medium text-slate-500">Logout</p>
+            </dt>
+            <dd class="ml-16 flex items-baseline pb-1 sm:pb-2">
+            </dd>
+            <div
+                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 to-rose-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+            </div>
+        </button>
+
+        <!-- System Status Card -->
+        <a href="systemstatus"
+            class="relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg shadow-slate-200/60 border border-slate-100 group hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 cursor-pointer">
+            <dt>
+                <div class="absolute rounded-xl bg-emerald-500/10 p-3">
+                    <i class="fas fa-server text-emerald-600 text-xl"></i>
+                </div>
+                <p class="ml-16 truncate text-sm font-medium text-slate-500">System Status</p>
+            </dt>
+            <dd class="ml-16 flex items-baseline pb-1 sm:pb-2">
+                <p class="text-2xl font-semibold text-emerald-600">Online</p>
+                <div class="ml-2 h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+            </dd>
+            <div
+                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+            </div>
+        </a>
+    </div>
+
+    <!-- Quick Actions & Recent Activity -->
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <!-- Quick Actions -->
+        <div class="rounded-2xl bg-white p-6 shadow-lg shadow-slate-200/60 border border-slate-100">
+            <h2 class="text-lg font-semibold text-slate-900 mb-4">Quick Actions</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <button @onclick='() => NavigationManager.NavigateTo("dataobjects/create")'
+                    class="flex flex-col items-center justify-center p-6 rounded-xl border-2 border-dashed border-slate-200 hover:border-indigo-500 hover:bg-indigo-50/50 transition-all duration-200 group">
+                    <div
+                        class="h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-200">
+                        <i class="fas fa-plus text-indigo-600 text-lg"></i>
+                    </div>
+                    <span class="text-sm font-medium text-slate-700 group-hover:text-indigo-700">New Data Object</span>
+                </button>
+
+                <button @onclick='() => NavigationManager.NavigateTo("dataobjects")'
+                    class="flex flex-col items-center justify-center p-6 rounded-xl border-2 border-dashed border-slate-200 hover:border-purple-500 hover:bg-purple-50/50 transition-all duration-200 group">
+                    <div
+                        class="h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-200">
+                        <i class="fas fa-list text-purple-600 text-lg"></i>
+                    </div>
+                    <span class="text-sm font-medium text-slate-700 group-hover:text-purple-700">View All Objects</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Recent Activity Placeholder -->
+        <div class="rounded-2xl bg-white p-6 shadow-lg shadow-slate-200/60 border border-slate-100">
+            <h2 class="text-lg font-semibold text-slate-900 mb-4">Recent Activity</h2>
+            <div class="flow-root">
+                <ul role="list" class="-mb-8">
+                    <li class="relative pb-8">
+                        <div class="relative flex space-x-3">
+                            <div>
+                                <span
+                                    class="h-8 w-8 rounded-full bg-indigo-500 flex items-center justify-center ring-8 ring-white">
+                                    <i class="fas fa-user text-white text-xs"></i>
+                                </span>
+                            </div>
+                            <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                <div>
+                                    <p class="text-sm text-slate-500">You logged in successfully</p>
+                                </div>
+                                <div class="whitespace-nowrap text-right text-sm text-slate-500">
+                                    <time datetime="2020-09-20">Just now</time>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="relative pb-8">
+                        <div class="absolute top-0 left-4 -ml-px h-full w-0.5 bg-slate-200" aria-hidden="true"></div>
+                        <div class="relative flex space-x-3">
+                            <div>
+                                <span
+                                    class="h-8 w-8 rounded-full bg-emerald-500 flex items-center justify-center ring-8 ring-white">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                            </div>
+                            <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                <div>
+                                    <p class="text-sm text-slate-500">System check completed</p>
+                                </div>
+                                <div class="whitespace-nowrap text-right text-sm text-slate-500">
+                                    <time datetime="2020-09-20">2m ago</time>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private int dataObjectCount = 0;
+    private int columnCount = 0;
+    private int legacySystemCount = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var dataObjects = await DataObjectService.GetAllAsync();
+            dataObjectCount = dataObjects.Count;
+
+            columnCount = await DataObjectService.GetTotalColumnCountAsync();
+
+            var legacySystems = await LegacySystemService.GetAllAsync();
+            legacySystemCount = legacySystems.Count;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading dashboard stats: {ex.Message}");
+        }
+    }
+
+    private async Task HandleLogout()
+    {
+        await AuthService.Logout();
+        NavigationManager.NavigateTo("/login");
+    }
+}

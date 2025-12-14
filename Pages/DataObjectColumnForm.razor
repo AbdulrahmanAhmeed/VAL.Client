@@ -1,0 +1,351 @@
+@page "/dataobjectscolumns/create"
+@page "/dataobjectscolumns/edit/{Id:guid}"
+@page "/dataobjectscolumns/view/{Id:guid}"
+@attribute [Authorize]
+@using VAL.Client.DTOs
+@using VAL.Client.Services
+@inject IDataObjectColumnService DataObjectColumnService
+@inject IDataObjectService DataObjectService
+@inject NavigationManager NavigationManager
+
+<PageTitle>@(IsEditMode ? "Edit Data Object Column" : IsViewMode ? "View Data Object Column" : "Create Data Object Column")</PageTitle>
+
+    <div class="max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-slate-900 tracking-tight">@(IsEditMode ? "Edit Data Object Column" : IsViewMode ? "View Data Object Column" : "Create Data Object Column")</h1>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/60 overflow-hidden border border-slate-100">
+        <EditForm Model="@column" OnValidSubmit="HandleSubmit">
+            <DataAnnotationsValidator />
+
+            <fieldset disabled="@IsViewMode" class="group">
+                <div class="p-8 space-y-8">
+                @if (errorMessage != null)
+                {
+                    <div class="rounded-xl bg-red-50 border border-red-100 p-4 flex items-start gap-3">
+                        <i class="fas fa-exclamation-circle text-red-400 text-xl mt-0.5"></i>
+                        <div>
+                            <h3 class="text-sm font-medium text-red-800">Error saving data</h3>
+                            <p class="text-sm text-red-700 mt-1">@errorMessage</p>
+                        </div>
+                    </div>
+                }
+
+                <div class="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                    <!-- Data Object Selection -->
+                    <div class="sm:col-span-6">
+                        <label for="dataObject" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Data Object <span class="text-red-500">*</span>
+                        </label>
+                        <InputSelect id="dataObject" @bind-Value="column.DataObjectGuid"
+                            class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors">
+                            <option value="">Select a Data Object...</option>
+                            @foreach (var obj in dataObjects)
+                            {
+                                <option value="@obj.DataObjectGuid">@obj.DataObjectShortName - @obj.DataObjectLongName
+                                </option>
+                            }
+                        </InputSelect>
+                        <ValidationMessage For="@(() => column.DataObjectGuid)" class="text-red-500 text-xs mt-1" />
+                    </div>
+
+                    <!-- Column Name -->
+                    <div class="sm:col-span-4">
+                        <label for="colName" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Column Name <span class="text-red-500">*</span>
+                        </label>
+                        <InputText id="colName" @bind-Value="column.DataObjectColumnName"
+                            class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors"
+                            placeholder="e.g., OrderDate" />
+                        <ValidationMessage For="@(() => column.DataObjectColumnName)"
+                            class="text-red-500 text-xs mt-1" />
+                    </div>
+
+                    <!-- Ordinal Position -->
+                    <div class="sm:col-span-2">
+                        <label for="ordinal" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Ordinal
+                        </label>
+                        <InputSelect id="ordinal" @bind-Value="column.DataObjectColumnOrdinalPosition"
+                            class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors">
+                            <option value="">Select...</option>
+                            @foreach (var item in ordinalPositionCodes)
+                            {
+                                <option value="@item.ColumnOrdinalPositionCode">@item.ColumnOrdinalPositionName</option>
+                            }
+                        </InputSelect>
+                    </div>
+
+                    <!-- Data Type -->
+                    <div class="sm:col-span-3">
+                        <label for="dataType" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Data Type <span class="text-red-500">*</span>
+                        </label>
+                        <InputSelect id="dataType" @bind-Value="column.DataObjectColumnDataType"
+                            class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors">
+                            <option value="">Select Type...</option>
+                            @foreach (var item in dataTypes)
+                            {
+                                <option value="@item.DataTypeName">@item.DataTypeName</option>
+                            }
+                        </InputSelect>
+                        <ValidationMessage For="@(() => column.DataObjectColumnDataType)"
+                            class="text-red-500 text-xs mt-1" />
+                    </div>
+
+                    <!-- Max Length -->
+                    <div class="sm:col-span-3">
+                        <label for="maxLen" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Max Length
+                        </label>
+                        <InputSelect id="maxLen" @bind-Value="column.DataObjectColumnMaxLen"
+                            class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors">
+                            <option value="">Select...</option>
+                            @foreach (var item in ordinalPositionCodes)
+                            {
+                                <option value="@item.ColumnOrdinalPositionCode">@item.ColumnOrdinalPositionName</option>
+                            }
+                        </InputSelect>
+                    </div>
+
+                    <!-- Min Length -->
+                    <div class="sm:col-span-3">
+                        <label for="minLen" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Min Length
+                        </label>
+                        <InputSelect id="minLen" @bind-Value="column.DataObjectColumnMinLen"
+                            class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors">
+                            <option value="">Select...</option>
+                            @foreach (var item in ordinalPositionCodes)
+                            {
+                                <option value="@item.ColumnOrdinalPositionCode">@item.ColumnOrdinalPositionName</option>
+                            }
+                        </InputSelect>
+                    </div>
+
+                    <!-- Regex Format -->
+                    <div class="sm:col-span-6">
+                        <label for="regex" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Regex Expression Format
+                        </label>
+                        <InputText id="regex" @bind-Value="column.DataObjectColumnRegexExpressionFormat"
+                            class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors font-mono"
+                            placeholder="e.g., ^[A-Za-z]+$" />
+                    </div>
+
+                    <!-- Is Required -->
+                    <div class="sm:col-span-3">
+                        <label for="isRequired" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Is Required
+                        </label>
+                        <InputSelect id="isRequired" @bind-Value="column.DataObjectColumnIsReqired"
+                            class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors">
+                            <option value="">Select...</option>
+                            @foreach (var item in yesNoUnknownNaOptions)
+                            {
+                                <option value="@item.YesNoUnknownNacode">@item.YesNoUnknownNaname</option>
+                            }
+                        </InputSelect>
+                    </div>
+
+                    <!-- Single Column Lookup Table -->
+                    <div class="sm:col-span-3">
+                        <label for="lookupTable" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Lookup Table
+                        </label>
+                        <InputText id="lookupTable" @bind-Value="column.DataObjectColumnSingleColumnLookupTable"
+                            class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors"
+                            placeholder="e.g., dbo.RefTable" />
+                    </div>
+
+                    <!-- Single Column Lookup Field -->
+                    <div class="sm:col-span-3">
+                        <label for="lookupField" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Lookup Field
+                        </label>
+                        <InputText id="lookupField" @bind-Value="column.DataObjectColumnSingleColumnLookupField"
+                            class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors"
+                            placeholder="e.g., FieldName" />
+                    </div>
+
+                    <!-- Lookup Is Reverse Lookup -->
+                    <div class="sm:col-span-3">
+                        <label for="isReverseLookup" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Is Reverse Lookup
+                        </label>
+                        <InputSelect id="isReverseLookup"
+                        @bind-Value="column.DataObjectColumnSingleColumnLookupIsReverseLookup"
+                            class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors">
+                            <option value="">Select...</option>
+                            @foreach (var item in yesNoUnknownNaOptions)
+                            {
+                                <option value="@item.YesNoUnknownNacode">@item.YesNoUnknownNaname</option>
+                            }
+                        </InputSelect>
+                    </div>
+
+                    <!-- Is Default Value Yes/No -->
+                    <div class="sm:col-span-3">
+                        <label for="isDefaultValue" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Is Default Value
+                        </label>
+                        <InputSelect id="isDefaultValue" @bind-Value="column.DataObjectColumnIsDefaultValueYesNo"
+                            class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors">
+                            <option value="">Select...</option>
+                            @foreach (var item in yesNoUnknownNaOptions)
+                            {
+                                <option value="@item.YesNoUnknownNacode">@item.YesNoUnknownNaname</option>
+                            }
+                        </InputSelect>
+                    </div>
+
+                    <!-- Default Value The Value -->
+                    <div class="sm:col-span-3">
+                        <label for="defaultValue" class="block text-sm font-semibold text-slate-700 mb-1">
+                            Default Value
+                        </label>
+                        <InputText id="defaultValue" @bind-Value="column.DataObjectColumnIsDefaultValueTheValue"
+                            class="block w-full rounded-xl border-slate-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-3 transition-colors"
+                            placeholder="Enter default value" />
+                    </div>
+
+                    <!-- Active Status -->
+                    <div class="sm:col-span-6 pt-2">
+                        <div class="flex items-center">
+                            <InputCheckbox id="active" @bind-Value="column.DataObjectColumnActive"
+                                class="h-5 w-5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 transition-colors cursor-pointer" />
+                            <label for="active" class="ml-3 text-sm font-medium text-slate-900 cursor-pointer">Active
+                                Status</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </fieldset>
+
+            <div class="bg-slate-50 px-8 py-5 flex items-center justify-end gap-3 border-t border-slate-100">
+                <button type="button" @onclick="Cancel"
+                    class="rounded-xl border border-slate-300 bg-white py-2.5 px-5 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-200">
+                    @(IsViewMode ? "Back" : "Cancel")
+                </button>
+                @if (!IsViewMode)
+                {
+                    <button type="submit" disabled="@saving"
+                        class="inline-flex justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 py-2.5 px-5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:translate-y-[-1px] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200">
+                        @if (saving)
+                        {
+                            <span class="inline-flex items-center">
+                                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                                    </circle>
+                                    <path class="opacity-75" fill="currentColor"
+                                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                    </path>
+                                </svg>
+                                Saving...
+                            </span>
+                        }
+                        else
+                        {
+                            <span>@(IsEditMode ? "Update Data Object Column" : "Create Data Object Column")</span>
+                        }
+                    </button>
+                }
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Guid? Id { get; set; }
+
+    private DataObjectColumnDto column = new() { DataObjectColumnActive = true };
+    private List<DataObjectDto> dataObjects = new();
+    private List<ZRefcolumnColumnOrdinalPositionCodeDto> ordinalPositionCodes = new();
+    private List<ZRefcolumnDataTypeDto> dataTypes = new();
+    private List<ZRefcolumnYesNoUnknownNaDto> yesNoUnknownNaOptions = new();
+    private bool saving = false;
+    private string? errorMessage;
+    private bool IsEditMode => Id.HasValue && !IsViewMode;
+    private bool IsViewMode => NavigationManager.Uri.Contains("/view/");
+
+    [Inject]
+    private IZRefcolumnColumnOrdinalPositionCodeService OrdinalPositionService { get; set; } = default!;
+
+    [Inject]
+    private IZRefcolumnDataTypeService DataTypeService { get; set; } = default!;
+
+    [Inject]
+    private IZRefcolumnYesNoUnknownNaService YesNoUnknownNaService { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Load data objects for dropdown
+            var result = await DataObjectService.GetAllAsync();
+            dataObjects = result.OrderBy(x => x.DataObjectShortName).ToList();
+
+            // Load ordinal position codes for dropdowns
+            ordinalPositionCodes = await OrdinalPositionService.GetAllAsync();
+
+            // Load data types for dropdown
+            dataTypes = await DataTypeService.GetAllAsync();
+
+            // Load Yes/No/Unknown/NA options for dropdowns
+            yesNoUnknownNaOptions = await YesNoUnknownNaService.GetAllAsync();
+
+            if (IsEditMode || IsViewMode)
+            {
+                var existing = await DataObjectColumnService.GetByIdAsync(Id!.Value);
+                if (existing != null)
+                {
+                    column = existing;
+                }
+                else
+                {
+                    errorMessage = "Column not found";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading data: {ex.Message}";
+        }
+    }
+
+    private async Task HandleSubmit()
+    {
+        try
+        {
+            saving = true;
+            errorMessage = null;
+
+            if (IsEditMode)
+            {
+                await DataObjectColumnService.UpdateAsync(Id!.Value, column);
+            }
+            else
+            {
+                await DataObjectColumnService.CreateAsync(column);
+            }
+
+            NavigationManager.NavigateTo("/dataobjectscolumns");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error saving column: {ex.Message}";
+        }
+        finally
+        {
+            saving = false;
+        }
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/dataobjectscolumns");
+    }
+}

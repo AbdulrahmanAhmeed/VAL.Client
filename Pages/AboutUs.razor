@@ -1,0 +1,271 @@
+@page "/aboutus"
+@attribute [Authorize]
+@inject AuthenticationStateProvider AuthStateProvider
+@inject NavigationManager NavigationManager
+
+<PageTitle>About Us</PageTitle>
+
+<div class="px-4 sm:px-6 lg:px-8 py-6">
+    <!-- Welcome Section -->
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Validations</h1>
+        <p class="mt-2 text-slate-500">Validations Before Loading and Profiling / Validations After Extraction</p>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="grid grid-cols-1 gap-8">
+        <!-- Validation Types Section -->
+        <div class="rounded-2xl bg-white p-6 shadow-lg shadow-slate-200/60 border border-slate-100">
+            <h2 class="text-lg font-semibold text-slate-900 mb-6 flex items-center gap-2">
+                <i class="fas fa-check-circle text-indigo-600"></i>
+                Types of Validation Checking
+            </h2>
+
+            <!-- In Development Section -->
+            <div class="mb-8">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="h-8 px-3 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center">
+                        <i class="fas fa-code text-sm mr-2"></i>
+                        <span class="text-sm font-semibold">In Development</span>
+                    </div>
+                    <span class="text-sm text-slate-500">6th Dec 2025</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Is Required -->
+                    <div
+                        class="p-4 rounded-xl border-2 border-blue-200 bg-blue-50/30 hover:bg-blue-50/50 transition-all duration-200">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-asterisk"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">Is Required</h3>
+                                <p class="text-xs text-slate-600">Validates that required fields contain values</p>
+                                <div class="mt-2 flex items-center gap-2">
+                                    <span
+                                        class="inline-flex items-center px-2 py-1 rounded-md bg-blue-100 text-blue-700 text-xs font-medium">
+                                        <i class="fas fa-spinner fa-spin mr-1"></i>
+                                        In Development
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Max Len Check -->
+                    <div
+                        class="p-4 rounded-xl border-2 border-blue-200 bg-blue-50/30 hover:bg-blue-50/50 transition-all duration-200">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-ruler-horizontal"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">Max Len Check</h3>
+                                <p class="text-xs text-slate-600">Ensures field values don't exceed maximum length</p>
+                                <div class="mt-2 flex items-center gap-2">
+                                    <span
+                                        class="inline-flex items-center px-2 py-1 rounded-md bg-blue-100 text-blue-700 text-xs font-medium">
+                                        <i class="fas fa-spinner fa-spin mr-1"></i>
+                                        In Development
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Min Len Check -->
+                    <div
+                        class="p-4 rounded-xl border-2 border-blue-200 bg-blue-50/30 hover:bg-blue-50/50 transition-all duration-200">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-ruler"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">Min Len Check</h3>
+                                <p class="text-xs text-slate-600">Ensures field values meet minimum length requirements
+                                </p>
+                                <div class="mt-2 flex items-center gap-2">
+                                    <span
+                                        class="inline-flex items-center px-2 py-1 rounded-md bg-blue-100 text-blue-700 text-xs font-medium">
+                                        <i class="fas fa-spinner fa-spin mr-1"></i>
+                                        In Development
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leading and Trailing Spaces -->
+                    <div
+                        class="p-4 rounded-xl border-2 border-blue-200 bg-blue-50/30 hover:bg-blue-50/50 transition-all duration-200">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-align-center"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">Leading and Trailing Spaces
+                                    Checking</h3>
+                                <p class="text-xs text-slate-600">Detects unwanted spaces at the start or end of values
+                                </p>
+                                <div class="mt-2 flex items-center gap-2">
+                                    <span
+                                        class="inline-flex items-center px-2 py-1 rounded-md bg-blue-100 text-blue-700 text-xs font-medium">
+                                        <i class="fas fa-spinner fa-spin mr-1"></i>
+                                        In Development
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- To Do Section -->
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="h-8 px-3 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center">
+                        <i class="fas fa-clock text-sm mr-2"></i>
+                        <span class="text-sm font-semibold">To Do</span>
+                    </div>
+                    <span class="text-sm text-slate-500">8th December Onwards</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Is Unique -->
+                    <div
+                        class="p-4 rounded-xl border-2 border-amber-200 bg-amber-50/30 hover:bg-amber-50/50 transition-all duration-200">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-fingerprint"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">Is Unique</h3>
+                                <p class="text-xs text-slate-600">Validates that field values are unique across records
+                                </p>
+                                <div class="mt-2 flex items-center gap-2">
+                                    <span
+                                        class="inline-flex items-center px-2 py-1 rounded-md bg-amber-100 text-amber-700 text-xs font-medium">
+                                        <i class="fas fa-hourglass-half mr-1"></i>
+                                        To Do
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Type -->
+                    <div
+                        class="p-4 rounded-xl border-2 border-amber-200 bg-amber-50/30 hover:bg-amber-50/50 transition-all duration-200">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">Data Type</h3>
+                                <p class="text-xs text-slate-600">Ensures values match the expected data type</p>
+                                <div class="mt-2 flex items-center gap-2">
+                                    <span
+                                        class="inline-flex items-center px-2 py-1 rounded-md bg-amber-100 text-amber-700 text-xs font-medium">
+                                        <i class="fas fa-hourglass-half mr-1"></i>
+                                        To Do
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Column Lookups -->
+                    <div
+                        class="p-4 rounded-xl border-2 border-amber-200 bg-amber-50/30 hover:bg-amber-50/50 transition-all duration-200">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">Single Column Lookups</h3>
+                                <p class="text-xs text-slate-600">Validates values against reference lookup tables</p>
+                                <div class="mt-2 flex items-center gap-2">
+                                    <span
+                                        class="inline-flex items-center px-2 py-1 rounded-md bg-amber-100 text-amber-700 text-xs font-medium">
+                                        <i class="fas fa-hourglass-half mr-1"></i>
+                                        To Do
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RegEx -->
+                    <div
+                        class="p-4 rounded-xl border-2 border-amber-200 bg-amber-50/30 hover:bg-amber-50/50 transition-all duration-200">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">RegEx</h3>
+                                <p class="text-xs text-slate-600">Validates values against regular expression patterns
+                                </p>
+                                <div class="mt-2 flex items-center gap-2">
+                                    <span
+                                        class="inline-flex items-center px-2 py-1 rounded-md bg-amber-100 text-amber-700 text-xs font-medium">
+                                        <i class="fas fa-hourglass-half mr-1"></i>
+                                        To Do
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 p-6 text-white shadow-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-blue-100 text-sm font-medium mb-1">In Development</p>
+                        <p class="text-3xl font-bold">4</p>
+                    </div>
+                    <div class="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center">
+                        <i class="fas fa-code text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 p-6 text-white shadow-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-amber-100 text-sm font-medium mb-1">To Do</p>
+                        <p class="text-3xl font-bold">4</p>
+                    </div>
+                    <div class="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center">
+                        <i class="fas fa-clock text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 p-6 text-white shadow-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-indigo-100 text-sm font-medium mb-1">Total Validations</p>
+                        <p class="text-3xl font-bold">8</p>
+                    </div>
+                    <div class="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center">
+                        <i class="fas fa-check-double text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

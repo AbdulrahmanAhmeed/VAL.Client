@@ -1,0 +1,97 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = VAL.Client
+build_property.RootNamespace = VAL.Client
+build_property.ProjectDir = D:\ActiveProjs\VBL.Back\VAL.Client\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\ActiveProjs\VBL.Back\VAL.Client
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Layout/AuthLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEF1dGhMYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Pages/AboutUs.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXRVcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Pages/ContactUs.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdFVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Pages/DataObjectColumnForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0YU9iamVjdENvbHVtbkZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Pages/DataObjectForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0YU9iamVjdEZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Pages/DataObjects.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0YU9iamVjdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Pages/DataObjectsColumns.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0YU9iamVjdHNDb2x1bW5zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Pages/LegacySystemForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVnYWN5U3lzdGVtRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Pages/LegacySystems.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVnYWN5U3lzdGVtcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Pages/RedirectToLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVkaXJlY3RUb0xvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Pages/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Pages/SystemStatus.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3lzdGVtU3RhdHVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-hk5i5tivw3
+
+[D:/ActiveProjs/VBL.Back/VAL.Client/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ca67g2ftxv

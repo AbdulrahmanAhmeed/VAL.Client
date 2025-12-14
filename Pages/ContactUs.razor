@@ -1,0 +1,182 @@
+@page "/contactus"
+@attribute [Authorize]
+@inject AuthenticationStateProvider AuthStateProvider
+@inject NavigationManager NavigationManager
+
+<PageTitle>Contact Us</PageTitle>
+
+<div class="px-4 sm:px-6 lg:px-8 py-6">
+    <!-- Welcome Section -->
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Contact Us</h1>
+        <p class="mt-2 text-slate-500">Get in touch with us for support and assistance</p>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="grid grid-cols-1 gap-8">
+        <!-- Contact Us Section -->
+        <div class="rounded-2xl bg-white p-6 shadow-lg shadow-slate-200/60 border border-slate-100">
+            <h2 class="text-lg font-semibold text-slate-900 mb-6 flex items-center gap-2">
+                <i class="fas fa-headset text-emerald-600"></i>
+                Contact Information
+            </h2>
+
+            <div class="space-y-6">
+                <!-- Availability Info -->
+                <div class="p-5 rounded-xl bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200">
+                    <div class="flex items-start gap-3 mb-4">
+                        <div
+                            class="h-10 w-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-sm font-semibold text-slate-900 mb-2">Availability</h3>
+                            <p class="text-sm text-slate-700 leading-relaxed">
+                                If you have any question or need support then we are available <strong>16 hours a day
+                                    and 7 days a week</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+                        <div class="p-3 rounded-lg bg-white/70 border border-emerald-100">
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="fas fa-globe-europe text-emerald-600 text-sm"></i>
+                                <span class="text-xs font-semibold text-slate-700">UK Hours</span>
+                            </div>
+                            <p class="text-sm font-bold text-slate-900">00:00 Midnight - 18:00 / 6PM</p>
+                        </div>
+                        <div class="p-3 rounded-lg bg-white/70 border border-emerald-100">
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="fas fa-globe-asia text-emerald-600 text-sm"></i>
+                                <span class="text-xs font-semibold text-slate-700">Philippines Hours</span>
+                            </div>
+                            <p class="text-sm font-bold text-slate-900">08:00 AM - 00:00 Midnight</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Methods -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Email Support -->
+                    <div
+                        class="p-4 rounded-xl border-2 border-indigo-200 bg-indigo-50/30 hover:bg-indigo-50/50 transition-all duration-200">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">Email Support</h3>
+                                <p class="text-xs text-amber-600 font-semibold mb-1">Mark Dicken</p>
+                                <a href="mailto:email@MarkDicken.com"
+                                    class="text-sm text-indigo-600 hover:text-indigo-700 hover:underline font-medium">
+                                    email@MarkDicken.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Support -->
+                    <div
+                        class="p-4 rounded-xl border-2 border-green-200 bg-green-50/30 hover:bg-green-50/50 transition-all duration-200">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">WhatsApp Support</h3>
+                                <p class="text-xs text-amber-600 font-semibold mb-1">Mark Dicken</p>
+                                <a href="https://wa.me/447786530377" target="_blank"
+                                    class="text-sm text-green-600 hover:text-green-700 hover:underline font-medium">
+                                    +44 7786 530377
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Phone Support -->
+                    <div
+                        class="p-4 rounded-xl border-2 border-purple-200 bg-purple-50/30 hover:bg-purple-50/50 transition-all duration-200">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">Mobile Phone Support</h3>
+                                <p class="text-xs text-amber-600 font-semibold mb-1">Mark Dicken</p>
+                                <a href="tel:+447786530377"
+                                    class="text-sm text-purple-600 hover:text-purple-700 hover:underline font-medium">
+                                    +44 (0) 7786 530377
+                                </a>
+                                <p class="text-xs text-slate-500 mt-1">(WhatsApp and Email Preferred)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Office Locations -->
+                    <div
+                        class="p-4 rounded-xl border-2 border-rose-200 bg-rose-50/30 hover:bg-rose-50/50 transition-all duration-200">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">Office Locations</h3>
+                                <p class="text-xs text-amber-600 font-semibold mb-1">Mark Dicken</p>
+                                <p class="text-sm text-slate-700">
+                                    <i class="fas fa-map-pin text-rose-500 text-xs mr-1"></i> Brackley, UK
+                                </p>
+                                <p class="text-sm text-slate-700 mt-1">
+                                    <i class="fas fa-map-pin text-rose-500 text-xs mr-1"></i> Solano, Philippines
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conference Call Preference -->
+                <div
+                    class="relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 p-6 text-white shadow-lg shadow-blue-500/30">
+                    <div class="relative z-10">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm flex-shrink-0">
+                                <i class="fas fa-video text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-lg mb-2">Conference Call Meetings Preferred</h3>
+                                <p class="text-blue-100 text-sm mb-3 leading-relaxed">
+                                    CONF Call Meetings are most preferred (MS Teams, Google Chat, Zoom Calls etc.).
+                                    Send me a meeting request and I generally accept all calls.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="inline-flex items-center px-3 py-1 rounded-full bg-white/20 text-white text-xs font-medium backdrop-blur-sm">
+                                        <i class="fab fa-microsoft text-sm mr-1"></i>
+                                        MS Teams
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center px-3 py-1 rounded-full bg-white/20 text-white text-xs font-medium backdrop-blur-sm">
+                                        <i class="fab fa-google text-sm mr-1"></i>
+                                        Google Chat
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center px-3 py-1 rounded-full bg-white/20 text-white text-xs font-medium backdrop-blur-sm">
+                                        <i class="fas fa-video text-sm mr-1"></i>
+                                        Zoom
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative background elements -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16"></div>
+                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full -ml-12 -mb-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
