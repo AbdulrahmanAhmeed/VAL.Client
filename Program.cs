@@ -41,5 +41,6 @@ builder.Services.AddScoped<IScreenLoadLogService, ScreenLoadLogService>();
 builder.Services.AddScoped<IZRefcolumnColumnOrdinalPositionCodeService, ZRefcolumnColumnOrdinalPositionCodeService>();
 builder.Services.AddScoped<IZRefcolumnDataTypeService, ZRefcolumnDataTypeService>();
 builder.Services.AddScoped<IZRefcolumnYesNoUnknownNaService, ZRefcolumnYesNoUnknownNaService>();
+builder.Services.AddScoped<IReportService, ReportService>();
 
 await builder.Build().RunAsync();

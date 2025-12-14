@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NzqoD2RvSPBQOr5xnFWdFXf39v77CcesF3Baz7NGMZo=",
+  "Hash": "lFbSUDyGPvZaj5fgvcLU10oW1MiBnLsG+lzZ8aMgaEM=",
   "Source": "VAL.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -199,8 +199,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "p6dykqx0b4",
-      "Integrity": "vzyWFQJi4uP/oFOKKA71R0ueHKVV0Mnl8UqXg3qKDGI=",
+      "Fingerprint": "y3zlx4zgtz",
+      "Integrity": "AtqLO6B9gmHDNlavK3stT9u5uE/MCTMUXOyGYAfIr8g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "obj\\Release\\net8.0\\blazor.publish.boot.json"
@@ -374,7 +374,7 @@
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\bin\\Release\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat"
     },
     {
-      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\30r2iysl2d-eyp46b4aj8.br",
+      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\30r2iysl2d-v10t55th0r.br",
       "SourceId": "VAL.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\",
@@ -388,14 +388,14 @@
       "RelatedAsset": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Private.CoreLib.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "br",
-      "Fingerprint": "mew468is19",
-      "Integrity": "DoP1uW+Sk4hoZZoqFyzeHyk2Y2W5HxEbPXlBjJTQFTs=",
+      "Fingerprint": "bi06n50o9n",
+      "Integrity": "7QyOJQcXY7rzZCU42rxIAGMO06M/zdI3l3gvYaOjTbg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Private.CoreLib.wasm"
     },
     {
-      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\30r2iysl2d-eyp46b4aj8.gz",
+      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\30r2iysl2d-v10t55th0r.gz",
       "SourceId": "VAL.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\",
@@ -409,8 +409,8 @@
       "RelatedAsset": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Private.CoreLib.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "as1iifmtuf",
-      "Integrity": "dpizJRQ2O3zfse4jrCLURzejqIHKrGDUyG6kFX6V4W0=",
+      "Fingerprint": "jt60k40plx",
+      "Integrity": "h4bYgbzDIvgtWvkJtkiMf24eDlOnFNaGLCRmivqMCuQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Private.CoreLib.wasm"
@@ -878,7 +878,7 @@
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\Microsoft.Extensions.Configuration.wasm"
     },
     {
-      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\87rj3dr1xq-5mjdwv3qu3.br",
+      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\87rj3dr1xq-3px6csc1ps.br",
       "SourceId": "VAL.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\",
@@ -892,14 +892,14 @@
       "RelatedAsset": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.ComponentModel.Annotations.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "br",
-      "Fingerprint": "e8ddm9c8vo",
-      "Integrity": "wiHdXhLTLpad1UrkGRSCaJhSRkpnHO1cPMbkHhLme50=",
+      "Fingerprint": "24hos3z9nq",
+      "Integrity": "Xptyf7N49WOxPTXsQu2kAtGNG8V1IhGywscLjjvI0BM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.ComponentModel.Annotations.wasm"
     },
     {
-      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\87rj3dr1xq-5mjdwv3qu3.gz",
+      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\87rj3dr1xq-3px6csc1ps.gz",
       "SourceId": "VAL.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\",
@@ -913,8 +913,8 @@
       "RelatedAsset": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.ComponentModel.Annotations.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "tmnxuxh1d4",
-      "Integrity": "5UeTPBaPgvdI4lbkdM1CyFn8CMFakSKEayU4WqDhMdU=",
+      "Fingerprint": "al91gyhqr0",
+      "Integrity": "zk5yjYEoephpS6K0IBOYpGvwGxda0KDQxolTKxw4oe0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.ComponentModel.Annotations.wasm"
@@ -1046,7 +1046,7 @@
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Text.Encodings.Web.wasm"
     },
     {
-      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ab0xbujuox-vd8rgwp2uq.br",
+      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ab0xbujuox-vzmx6qx06g.br",
       "SourceId": "VAL.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\",
@@ -1060,14 +1060,14 @@
       "RelatedAsset": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Net.Http.Json.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "br",
-      "Fingerprint": "occefcxult",
-      "Integrity": "+Bqw5PxiKnS60HIhmldH911iw0cVGhJXt/PdH1P+/UE=",
+      "Fingerprint": "84a5lv41rs",
+      "Integrity": "eFO91C3FVQhol+UeXQlCWJtg8dJ5ABKWCTDPF6KvnG0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Net.Http.Json.wasm"
     },
     {
-      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ab0xbujuox-vd8rgwp2uq.gz",
+      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ab0xbujuox-vzmx6qx06g.gz",
       "SourceId": "VAL.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\",
@@ -1081,8 +1081,8 @@
       "RelatedAsset": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Net.Http.Json.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "3q9sbqpygw",
-      "Integrity": "O8P/6E52TU8X6peEn884gdtuP7e7fyKJhRZpBIytz40=",
+      "Fingerprint": "lihvk77dv8",
+      "Integrity": "bSrDpvGx+0sHMgfROHKCP40a3rsilPwfze9QboX/ITM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Net.Http.Json.wasm"
@@ -1802,7 +1802,7 @@
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Collections.wasm"
     },
     {
-      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\momxivkavv-p6dykqx0b4.br",
+      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\momxivkavv-y3zlx4zgtz.br",
       "SourceId": "VAL.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\",
@@ -1816,14 +1816,14 @@
       "RelatedAsset": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\blazor.publish.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "br",
-      "Fingerprint": "a36cao34l4",
-      "Integrity": "1oOD3cGRc7Qek05GXChXiceg/Aaa9yrjziZrDraIXmc=",
+      "Fingerprint": "4bdp9lf5r8",
+      "Integrity": "YKPzgq2yrz3Fj1+CJ3MKM3SNUN3nGpR5x2Ash03KbRk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\blazor.publish.boot.json"
     },
     {
-      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\momxivkavv-p6dykqx0b4.gz",
+      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\momxivkavv-y3zlx4zgtz.gz",
       "SourceId": "VAL.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\",
@@ -1837,14 +1837,14 @@
       "RelatedAsset": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\blazor.publish.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "jzpo7rijnx",
-      "Integrity": "cdNS20SkggKgVu4l55MVTu2pcm6rFTLePDjjIc3VM3Y=",
+      "Fingerprint": "qe0163sl77",
+      "Integrity": "Umr+UyeRVeAK23yC9NAbWBSl/yOXxdJH2zejCzotmxg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\blazor.publish.boot.json"
     },
     {
-      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\mt9gdwxjs0-a96j7kz483.br",
+      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\mt9gdwxjs0-kp2ltukwue.br",
       "SourceId": "VAL.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\",
@@ -1858,14 +1858,14 @@
       "RelatedAsset": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Net.Http.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "br",
-      "Fingerprint": "w1o2gtpype",
-      "Integrity": "vGUBiGxaoO7/wNCqJCl38Hy2nkO917eaqMUnwuaAtQ8=",
+      "Fingerprint": "febhirv3y4",
+      "Integrity": "96G4NHVtRI5veRFBl12rdkxAdyUuNOBSC0jnTvszhiA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Net.Http.wasm"
     },
     {
-      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\mt9gdwxjs0-a96j7kz483.gz",
+      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\mt9gdwxjs0-kp2ltukwue.gz",
       "SourceId": "VAL.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\",
@@ -1879,8 +1879,8 @@
       "RelatedAsset": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Net.Http.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "9vre6m1jn1",
-      "Integrity": "lTKXNHJ0esQZjVAgHxcih9LdPQfMyWx5FP+7i7p5xn4=",
+      "Fingerprint": "f21wv87qba",
+      "Integrity": "maPa0FWLTE63/EADJQplfPTO9IjVovDguftk7PjSsbY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Net.Http.wasm"
@@ -1991,7 +1991,7 @@
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.ComponentModel.TypeConverter.wasm"
     },
     {
-      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ppbaujsrgr-x6ar87d9o5.br",
+      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ppbaujsrgr-asu67wrrag.br",
       "SourceId": "VAL.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\",
@@ -2005,14 +2005,14 @@
       "RelatedAsset": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\VAL.Client.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "br",
-      "Fingerprint": "8l21jxpq0f",
-      "Integrity": "pBXiObylj17h8Atzay0tGNIN5oy1Yljmhgk580y4B/g=",
+      "Fingerprint": "pu1gbqzjkm",
+      "Integrity": "nw/cE+aAf4PMsFL/Oadhr1RS/BU93BBiYBES/lmf3YY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\VAL.Client.wasm"
     },
     {
-      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ppbaujsrgr-x6ar87d9o5.gz",
+      "Identity": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ppbaujsrgr-asu67wrrag.gz",
       "SourceId": "VAL.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\",
@@ -2026,8 +2026,8 @@
       "RelatedAsset": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\VAL.Client.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "gil9sp44zo",
-      "Integrity": "2EqZFFNIYvavhRHFmWxSGJ3mfbFmYJu+esQKBWZ5W4A=",
+      "Fingerprint": "y3gsq6xgvn",
+      "Integrity": "cn2RN8hnNIfoQ0AGz7KvGBnFf6c54qTRUh3YNoZ8TSM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\VAL.Client.wasm"
@@ -3139,8 +3139,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "5mjdwv3qu3",
-      "Integrity": "jVBh/z5ktB4XqT4ZD7+H+uQCJYjS/eVjGs7N207Hh+E=",
+      "Fingerprint": "3px6csc1ps",
+      "Integrity": "6ZMhNeZcTbfbAwmKBaz1LcTEu/uMAj2rA8kqsIwE66Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.ComponentModel.Annotations.wasm"
@@ -3328,8 +3328,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "vd8rgwp2uq",
-      "Integrity": "zfzSmr+76FrJEAD8cn7HtqitZ7eLUZOjL1lR9WnfNlo=",
+      "Fingerprint": "vzmx6qx06g",
+      "Integrity": "VY+iwSq4Uj6aRi0VuJO0g7I9LzOAAsNWHNDiYFTXigY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Net.Http.Json.wasm"
@@ -3349,8 +3349,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "a96j7kz483",
-      "Integrity": "kvIN2DvI+gKNqYl1NG6JB91pEdZ26E806DLm8X44YGg=",
+      "Fingerprint": "kp2ltukwue",
+      "Integrity": "CErvYr8d8ouG6zwipzV6QQxMuXeJWnlUhQPQZjTmYeA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Net.Http.wasm"
@@ -3412,8 +3412,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "eyp46b4aj8",
-      "Integrity": "mhHQSaji+DzkG1RM4XkEX0VgSZua8Rj/I69/12CVo88=",
+      "Fingerprint": "v10t55th0r",
+      "Integrity": "gw5NaIsjY05cWksft4xN87RSRucyExbBFML/zfOXtEk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\System.Private.CoreLib.wasm"
@@ -3643,8 +3643,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "x6ar87d9o5",
-      "Integrity": "p/9kDgYBSZXoyM3gx8I04VkTNrreENVSG4+VDPYTK8A=",
+      "Fingerprint": "asu67wrrag",
+      "Integrity": "psfhWA2w56HWY0FYxS65CMVRVSk/nVfYoOs3Ju1lrMM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\webcil\\publish\\VAL.Client.wasm"
@@ -3817,11 +3817,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vzyWFQJi4uP/oFOKKA71R0ueHKVV0Mnl8UqXg3qKDGI=\""
+          "Value": "\"AtqLO6B9gmHDNlavK3stT9u5uE/MCTMUXOyGYAfIr8g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Dec 2025 08:11:23 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3831,18 +3831,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vzyWFQJi4uP/oFOKKA71R0ueHKVV0Mnl8UqXg3qKDGI="
+          "Value": "sha256-AtqLO6B9gmHDNlavK3stT9u5uE/MCTMUXOyGYAfIr8g="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\momxivkavv-p6dykqx0b4.br",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\momxivkavv-y3zlx4zgtz.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.000405515004"
+          "Quality": "0.000405679513"
         }
       ],
       "ResponseHeaders": [
@@ -3852,15 +3852,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2465"
+          "Value": "2464"
         },
         {
           "Name": "ETag",
-          "Value": "\"1oOD3cGRc7Qek05GXChXiceg/Aaa9yrjziZrDraIXmc=\""
+          "Value": "\"YKPzgq2yrz3Fj1+CJ3MKM3SNUN3nGpR5x2Ash03KbRk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Dec 2025 08:11:23 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3880,24 +3880,24 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"vzyWFQJi4uP/oFOKKA71R0ueHKVV0Mnl8UqXg3qKDGI=\""
+          "Value": "W/\"AtqLO6B9gmHDNlavK3stT9u5uE/MCTMUXOyGYAfIr8g=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vzyWFQJi4uP/oFOKKA71R0ueHKVV0Mnl8UqXg3qKDGI="
+          "Value": "sha256-AtqLO6B9gmHDNlavK3stT9u5uE/MCTMUXOyGYAfIr8g="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\momxivkavv-p6dykqx0b4.gz",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\momxivkavv-y3zlx4zgtz.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000373971578"
+          "Quality": "0.000373831776"
         }
       ],
       "ResponseHeaders": [
@@ -3907,15 +3907,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2673"
+          "Value": "2674"
         },
         {
           "Name": "ETag",
-          "Value": "\"cdNS20SkggKgVu4l55MVTu2pcm6rFTLePDjjIc3VM3Y=\""
+          "Value": "\"Umr+UyeRVeAK23yC9NAbWBSl/yOXxdJH2zejCzotmxg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Dec 2025 08:11:23 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3935,19 +3935,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"vzyWFQJi4uP/oFOKKA71R0ueHKVV0Mnl8UqXg3qKDGI=\""
+          "Value": "W/\"AtqLO6B9gmHDNlavK3stT9u5uE/MCTMUXOyGYAfIr8g=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vzyWFQJi4uP/oFOKKA71R0ueHKVV0Mnl8UqXg3qKDGI="
+          "Value": "sha256-AtqLO6B9gmHDNlavK3stT9u5uE/MCTMUXOyGYAfIr8g="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.br",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\momxivkavv-p6dykqx0b4.br",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\momxivkavv-y3zlx4zgtz.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3956,7 +3956,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2465"
+          "Value": "2464"
         },
         {
           "Name": "Content-Type",
@@ -3964,11 +3964,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1oOD3cGRc7Qek05GXChXiceg/Aaa9yrjziZrDraIXmc=\""
+          "Value": "\"YKPzgq2yrz3Fj1+CJ3MKM3SNUN3nGpR5x2Ash03KbRk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Dec 2025 08:11:23 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3986,13 +3986,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-1oOD3cGRc7Qek05GXChXiceg/Aaa9yrjziZrDraIXmc="
+          "Value": "sha256-YKPzgq2yrz3Fj1+CJ3MKM3SNUN3nGpR5x2Ash03KbRk="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\momxivkavv-p6dykqx0b4.gz",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\momxivkavv-y3zlx4zgtz.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4001,7 +4001,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2673"
+          "Value": "2674"
         },
         {
           "Name": "Content-Type",
@@ -4009,11 +4009,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cdNS20SkggKgVu4l55MVTu2pcm6rFTLePDjjIc3VM3Y=\""
+          "Value": "\"Umr+UyeRVeAK23yC9NAbWBSl/yOXxdJH2zejCzotmxg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Dec 2025 08:11:23 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4031,7 +4031,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-cdNS20SkggKgVu4l55MVTu2pcm6rFTLePDjjIc3VM3Y="
+          "Value": "sha256-Umr+UyeRVeAK23yC9NAbWBSl/yOXxdJH2zejCzotmxg="
         }
       ]
     },
@@ -11384,12 +11384,12 @@
     },
     {
       "Route": "_framework/System.ComponentModel.Annotations.wasm",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\87rj3dr1xq-5mjdwv3qu3.br",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\87rj3dr1xq-3px6csc1ps.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.000087542677"
+          "Quality": "0.000085506627"
         }
       ],
       "ResponseHeaders": [
@@ -11399,15 +11399,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11422"
+          "Value": "11694"
         },
         {
           "Name": "ETag",
-          "Value": "\"wiHdXhLTLpad1UrkGRSCaJhSRkpnHO1cPMbkHhLme50=\""
+          "Value": "\"Xptyf7N49WOxPTXsQu2kAtGNG8V1IhGywscLjjvI0BM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 04 Dec 2025 19:14:58 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11427,24 +11427,24 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jVBh/z5ktB4XqT4ZD7+H+uQCJYjS/eVjGs7N207Hh+E=\""
+          "Value": "W/\"6ZMhNeZcTbfbAwmKBaz1LcTEu/uMAj2rA8kqsIwE66Q=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jVBh/z5ktB4XqT4ZD7+H+uQCJYjS/eVjGs7N207Hh+E="
+          "Value": "sha256-6ZMhNeZcTbfbAwmKBaz1LcTEu/uMAj2rA8kqsIwE66Q="
         }
       ]
     },
     {
       "Route": "_framework/System.ComponentModel.Annotations.wasm",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\87rj3dr1xq-5mjdwv3qu3.gz",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\87rj3dr1xq-3px6csc1ps.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000077591558"
+          "Quality": "0.000075924379"
         }
       ],
       "ResponseHeaders": [
@@ -11454,15 +11454,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12887"
+          "Value": "13170"
         },
         {
           "Name": "ETag",
-          "Value": "\"5UeTPBaPgvdI4lbkdM1CyFn8CMFakSKEayU4WqDhMdU=\""
+          "Value": "\"zk5yjYEoephpS6K0IBOYpGvwGxda0KDQxolTKxw4oe0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 04 Dec 2025 19:14:58 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11482,13 +11482,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jVBh/z5ktB4XqT4ZD7+H+uQCJYjS/eVjGs7N207Hh+E=\""
+          "Value": "W/\"6ZMhNeZcTbfbAwmKBaz1LcTEu/uMAj2rA8kqsIwE66Q=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jVBh/z5ktB4XqT4ZD7+H+uQCJYjS/eVjGs7N207Hh+E="
+          "Value": "sha256-6ZMhNeZcTbfbAwmKBaz1LcTEu/uMAj2rA8kqsIwE66Q="
         }
       ]
     },
@@ -11503,7 +11503,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "28949"
+          "Value": "29973"
         },
         {
           "Name": "Content-Type",
@@ -11511,11 +11511,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jVBh/z5ktB4XqT4ZD7+H+uQCJYjS/eVjGs7N207Hh+E=\""
+          "Value": "\"6ZMhNeZcTbfbAwmKBaz1LcTEu/uMAj2rA8kqsIwE66Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 04 Dec 2025 19:14:58 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11525,13 +11525,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jVBh/z5ktB4XqT4ZD7+H+uQCJYjS/eVjGs7N207Hh+E="
+          "Value": "sha256-6ZMhNeZcTbfbAwmKBaz1LcTEu/uMAj2rA8kqsIwE66Q="
         }
       ]
     },
     {
       "Route": "_framework/System.ComponentModel.Annotations.wasm.br",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\87rj3dr1xq-5mjdwv3qu3.br",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\87rj3dr1xq-3px6csc1ps.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11540,7 +11540,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11422"
+          "Value": "11694"
         },
         {
           "Name": "Content-Type",
@@ -11548,11 +11548,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wiHdXhLTLpad1UrkGRSCaJhSRkpnHO1cPMbkHhLme50=\""
+          "Value": "\"Xptyf7N49WOxPTXsQu2kAtGNG8V1IhGywscLjjvI0BM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 04 Dec 2025 19:14:58 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11570,13 +11570,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wiHdXhLTLpad1UrkGRSCaJhSRkpnHO1cPMbkHhLme50="
+          "Value": "sha256-Xptyf7N49WOxPTXsQu2kAtGNG8V1IhGywscLjjvI0BM="
         }
       ]
     },
     {
       "Route": "_framework/System.ComponentModel.Annotations.wasm.gz",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\87rj3dr1xq-5mjdwv3qu3.gz",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\87rj3dr1xq-3px6csc1ps.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11585,7 +11585,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12887"
+          "Value": "13170"
         },
         {
           "Name": "Content-Type",
@@ -11593,11 +11593,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5UeTPBaPgvdI4lbkdM1CyFn8CMFakSKEayU4WqDhMdU=\""
+          "Value": "\"zk5yjYEoephpS6K0IBOYpGvwGxda0KDQxolTKxw4oe0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 04 Dec 2025 19:14:58 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11615,7 +11615,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5UeTPBaPgvdI4lbkdM1CyFn8CMFakSKEayU4WqDhMdU="
+          "Value": "sha256-zk5yjYEoephpS6K0IBOYpGvwGxda0KDQxolTKxw4oe0="
         }
       ]
     },
@@ -13517,12 +13517,12 @@
     },
     {
       "Route": "_framework/System.Net.Http.Json.wasm",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ab0xbujuox-vd8rgwp2uq.br",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ab0xbujuox-vzmx6qx06g.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.000164771791"
+          "Quality": "0.000109301563"
         }
       ],
       "ResponseHeaders": [
@@ -13532,15 +13532,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6068"
+          "Value": "9148"
         },
         {
           "Name": "ETag",
-          "Value": "\"+Bqw5PxiKnS60HIhmldH911iw0cVGhJXt/PdH1P+/UE=\""
+          "Value": "\"eFO91C3FVQhol+UeXQlCWJtg8dJ5ABKWCTDPF6KvnG0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 04 Dec 2025 19:14:59 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13560,24 +13560,24 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"zfzSmr+76FrJEAD8cn7HtqitZ7eLUZOjL1lR9WnfNlo=\""
+          "Value": "W/\"VY+iwSq4Uj6aRi0VuJO0g7I9LzOAAsNWHNDiYFTXigY=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zfzSmr+76FrJEAD8cn7HtqitZ7eLUZOjL1lR9WnfNlo="
+          "Value": "sha256-VY+iwSq4Uj6aRi0VuJO0g7I9LzOAAsNWHNDiYFTXigY="
         }
       ]
     },
     {
       "Route": "_framework/System.Net.Http.Json.wasm",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ab0xbujuox-vd8rgwp2uq.gz",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ab0xbujuox-vzmx6qx06g.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000148898154"
+          "Quality": "0.000096646371"
         }
       ],
       "ResponseHeaders": [
@@ -13587,15 +13587,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6715"
+          "Value": "10346"
         },
         {
           "Name": "ETag",
-          "Value": "\"O8P/6E52TU8X6peEn884gdtuP7e7fyKJhRZpBIytz40=\""
+          "Value": "\"bSrDpvGx+0sHMgfROHKCP40a3rsilPwfze9QboX/ITM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 04 Dec 2025 19:14:59 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13615,13 +13615,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"zfzSmr+76FrJEAD8cn7HtqitZ7eLUZOjL1lR9WnfNlo=\""
+          "Value": "W/\"VY+iwSq4Uj6aRi0VuJO0g7I9LzOAAsNWHNDiYFTXigY=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zfzSmr+76FrJEAD8cn7HtqitZ7eLUZOjL1lR9WnfNlo="
+          "Value": "sha256-VY+iwSq4Uj6aRi0VuJO0g7I9LzOAAsNWHNDiYFTXigY="
         }
       ]
     },
@@ -13636,7 +13636,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14613"
+          "Value": "22293"
         },
         {
           "Name": "Content-Type",
@@ -13644,11 +13644,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zfzSmr+76FrJEAD8cn7HtqitZ7eLUZOjL1lR9WnfNlo=\""
+          "Value": "\"VY+iwSq4Uj6aRi0VuJO0g7I9LzOAAsNWHNDiYFTXigY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 04 Dec 2025 19:14:59 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13658,13 +13658,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zfzSmr+76FrJEAD8cn7HtqitZ7eLUZOjL1lR9WnfNlo="
+          "Value": "sha256-VY+iwSq4Uj6aRi0VuJO0g7I9LzOAAsNWHNDiYFTXigY="
         }
       ]
     },
     {
       "Route": "_framework/System.Net.Http.Json.wasm.br",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ab0xbujuox-vd8rgwp2uq.br",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ab0xbujuox-vzmx6qx06g.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13673,7 +13673,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6068"
+          "Value": "9148"
         },
         {
           "Name": "Content-Type",
@@ -13681,11 +13681,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+Bqw5PxiKnS60HIhmldH911iw0cVGhJXt/PdH1P+/UE=\""
+          "Value": "\"eFO91C3FVQhol+UeXQlCWJtg8dJ5ABKWCTDPF6KvnG0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 04 Dec 2025 19:14:59 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13703,13 +13703,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+Bqw5PxiKnS60HIhmldH911iw0cVGhJXt/PdH1P+/UE="
+          "Value": "sha256-eFO91C3FVQhol+UeXQlCWJtg8dJ5ABKWCTDPF6KvnG0="
         }
       ]
     },
     {
       "Route": "_framework/System.Net.Http.Json.wasm.gz",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ab0xbujuox-vd8rgwp2uq.gz",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ab0xbujuox-vzmx6qx06g.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13718,7 +13718,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6715"
+          "Value": "10346"
         },
         {
           "Name": "Content-Type",
@@ -13726,11 +13726,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"O8P/6E52TU8X6peEn884gdtuP7e7fyKJhRZpBIytz40=\""
+          "Value": "\"bSrDpvGx+0sHMgfROHKCP40a3rsilPwfze9QboX/ITM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 04 Dec 2025 19:14:59 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13748,18 +13748,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-O8P/6E52TU8X6peEn884gdtuP7e7fyKJhRZpBIytz40="
+          "Value": "sha256-bSrDpvGx+0sHMgfROHKCP40a3rsilPwfze9QboX/ITM="
         }
       ]
     },
     {
       "Route": "_framework/System.Net.Http.wasm",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\mt9gdwxjs0-a96j7kz483.br",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\mt9gdwxjs0-kp2ltukwue.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.000018457677"
+          "Quality": "0.000018447121"
         }
       ],
       "ResponseHeaders": [
@@ -13769,15 +13769,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "54177"
+          "Value": "54208"
         },
         {
           "Name": "ETag",
-          "Value": "\"vGUBiGxaoO7/wNCqJCl38Hy2nkO917eaqMUnwuaAtQ8=\""
+          "Value": "\"96G4NHVtRI5veRFBl12rdkxAdyUuNOBSC0jnTvszhiA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 12:48:28 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13797,24 +13797,24 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"kvIN2DvI+gKNqYl1NG6JB91pEdZ26E806DLm8X44YGg=\""
+          "Value": "W/\"CErvYr8d8ouG6zwipzV6QQxMuXeJWnlUhQPQZjTmYeA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kvIN2DvI+gKNqYl1NG6JB91pEdZ26E806DLm8X44YGg="
+          "Value": "sha256-CErvYr8d8ouG6zwipzV6QQxMuXeJWnlUhQPQZjTmYeA="
         }
       ]
     },
     {
       "Route": "_framework/System.Net.Http.wasm",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\mt9gdwxjs0-a96j7kz483.gz",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\mt9gdwxjs0-kp2ltukwue.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000016114997"
+          "Quality": "0.000016096839"
         }
       ],
       "ResponseHeaders": [
@@ -13824,15 +13824,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "62053"
+          "Value": "62123"
         },
         {
           "Name": "ETag",
-          "Value": "\"lTKXNHJ0esQZjVAgHxcih9LdPQfMyWx5FP+7i7p5xn4=\""
+          "Value": "\"maPa0FWLTE63/EADJQplfPTO9IjVovDguftk7PjSsbY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 12:48:28 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13852,13 +13852,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"kvIN2DvI+gKNqYl1NG6JB91pEdZ26E806DLm8X44YGg=\""
+          "Value": "W/\"CErvYr8d8ouG6zwipzV6QQxMuXeJWnlUhQPQZjTmYeA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kvIN2DvI+gKNqYl1NG6JB91pEdZ26E806DLm8X44YGg="
+          "Value": "sha256-CErvYr8d8ouG6zwipzV6QQxMuXeJWnlUhQPQZjTmYeA="
         }
       ]
     },
@@ -13881,11 +13881,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kvIN2DvI+gKNqYl1NG6JB91pEdZ26E806DLm8X44YGg=\""
+          "Value": "\"CErvYr8d8ouG6zwipzV6QQxMuXeJWnlUhQPQZjTmYeA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 12:48:28 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13895,13 +13895,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kvIN2DvI+gKNqYl1NG6JB91pEdZ26E806DLm8X44YGg="
+          "Value": "sha256-CErvYr8d8ouG6zwipzV6QQxMuXeJWnlUhQPQZjTmYeA="
         }
       ]
     },
     {
       "Route": "_framework/System.Net.Http.wasm.br",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\mt9gdwxjs0-a96j7kz483.br",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\mt9gdwxjs0-kp2ltukwue.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13910,7 +13910,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "54177"
+          "Value": "54208"
         },
         {
           "Name": "Content-Type",
@@ -13918,11 +13918,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vGUBiGxaoO7/wNCqJCl38Hy2nkO917eaqMUnwuaAtQ8=\""
+          "Value": "\"96G4NHVtRI5veRFBl12rdkxAdyUuNOBSC0jnTvszhiA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 12:48:28 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13940,13 +13940,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vGUBiGxaoO7/wNCqJCl38Hy2nkO917eaqMUnwuaAtQ8="
+          "Value": "sha256-96G4NHVtRI5veRFBl12rdkxAdyUuNOBSC0jnTvszhiA="
         }
       ]
     },
     {
       "Route": "_framework/System.Net.Http.wasm.gz",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\mt9gdwxjs0-a96j7kz483.gz",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\mt9gdwxjs0-kp2ltukwue.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13955,7 +13955,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "62053"
+          "Value": "62123"
         },
         {
           "Name": "Content-Type",
@@ -13963,11 +13963,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"lTKXNHJ0esQZjVAgHxcih9LdPQfMyWx5FP+7i7p5xn4=\""
+          "Value": "\"maPa0FWLTE63/EADJQplfPTO9IjVovDguftk7PjSsbY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 12:48:28 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13985,7 +13985,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-lTKXNHJ0esQZjVAgHxcih9LdPQfMyWx5FP+7i7p5xn4="
+          "Value": "sha256-maPa0FWLTE63/EADJQplfPTO9IjVovDguftk7PjSsbY="
         }
       ]
     },
@@ -14465,12 +14465,12 @@
     },
     {
       "Route": "_framework/System.Private.CoreLib.wasm",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\30r2iysl2d-eyp46b4aj8.br",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\30r2iysl2d-v10t55th0r.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.000001892112"
+          "Quality": "0.000001894004"
         }
       ],
       "ResponseHeaders": [
@@ -14480,15 +14480,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "528509"
+          "Value": "527981"
         },
         {
           "Name": "ETag",
-          "Value": "\"DoP1uW+Sk4hoZZoqFyzeHyk2Y2W5HxEbPXlBjJTQFTs=\""
+          "Value": "\"7QyOJQcXY7rzZCU42rxIAGMO06M/zdI3l3gvYaOjTbg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 22:30:26 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14508,24 +14508,24 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"mhHQSaji+DzkG1RM4XkEX0VgSZua8Rj/I69/12CVo88=\""
+          "Value": "W/\"gw5NaIsjY05cWksft4xN87RSRucyExbBFML/zfOXtEk=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mhHQSaji+DzkG1RM4XkEX0VgSZua8Rj/I69/12CVo88="
+          "Value": "sha256-gw5NaIsjY05cWksft4xN87RSRucyExbBFML/zfOXtEk="
         }
       ]
     },
     {
       "Route": "_framework/System.Private.CoreLib.wasm",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\30r2iysl2d-eyp46b4aj8.gz",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\30r2iysl2d-v10t55th0r.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000001556013"
+          "Quality": "0.000001555977"
         }
       ],
       "ResponseHeaders": [
@@ -14535,15 +14535,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "642667"
+          "Value": "642682"
         },
         {
           "Name": "ETag",
-          "Value": "\"dpizJRQ2O3zfse4jrCLURzejqIHKrGDUyG6kFX6V4W0=\""
+          "Value": "\"h4bYgbzDIvgtWvkJtkiMf24eDlOnFNaGLCRmivqMCuQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 22:30:26 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14563,13 +14563,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"mhHQSaji+DzkG1RM4XkEX0VgSZua8Rj/I69/12CVo88=\""
+          "Value": "W/\"gw5NaIsjY05cWksft4xN87RSRucyExbBFML/zfOXtEk=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mhHQSaji+DzkG1RM4XkEX0VgSZua8Rj/I69/12CVo88="
+          "Value": "sha256-gw5NaIsjY05cWksft4xN87RSRucyExbBFML/zfOXtEk="
         }
       ]
     },
@@ -14592,11 +14592,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mhHQSaji+DzkG1RM4XkEX0VgSZua8Rj/I69/12CVo88=\""
+          "Value": "\"gw5NaIsjY05cWksft4xN87RSRucyExbBFML/zfOXtEk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 22:30:26 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14606,13 +14606,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mhHQSaji+DzkG1RM4XkEX0VgSZua8Rj/I69/12CVo88="
+          "Value": "sha256-gw5NaIsjY05cWksft4xN87RSRucyExbBFML/zfOXtEk="
         }
       ]
     },
     {
       "Route": "_framework/System.Private.CoreLib.wasm.br",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\30r2iysl2d-eyp46b4aj8.br",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\30r2iysl2d-v10t55th0r.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14621,7 +14621,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "528509"
+          "Value": "527981"
         },
         {
           "Name": "Content-Type",
@@ -14629,11 +14629,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DoP1uW+Sk4hoZZoqFyzeHyk2Y2W5HxEbPXlBjJTQFTs=\""
+          "Value": "\"7QyOJQcXY7rzZCU42rxIAGMO06M/zdI3l3gvYaOjTbg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 22:30:26 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14651,13 +14651,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DoP1uW+Sk4hoZZoqFyzeHyk2Y2W5HxEbPXlBjJTQFTs="
+          "Value": "sha256-7QyOJQcXY7rzZCU42rxIAGMO06M/zdI3l3gvYaOjTbg="
         }
       ]
     },
     {
       "Route": "_framework/System.Private.CoreLib.wasm.gz",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\30r2iysl2d-eyp46b4aj8.gz",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\30r2iysl2d-v10t55th0r.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14666,7 +14666,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "642667"
+          "Value": "642682"
         },
         {
           "Name": "Content-Type",
@@ -14674,11 +14674,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dpizJRQ2O3zfse4jrCLURzejqIHKrGDUyG6kFX6V4W0=\""
+          "Value": "\"h4bYgbzDIvgtWvkJtkiMf24eDlOnFNaGLCRmivqMCuQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 22:30:26 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14696,7 +14696,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dpizJRQ2O3zfse4jrCLURzejqIHKrGDUyG6kFX6V4W0="
+          "Value": "sha256-h4bYgbzDIvgtWvkJtkiMf24eDlOnFNaGLCRmivqMCuQ="
         }
       ]
     },
@@ -17072,12 +17072,12 @@
     },
     {
       "Route": "_framework/VAL.Client.wasm",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ppbaujsrgr-x6ar87d9o5.br",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ppbaujsrgr-asu67wrrag.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.000021767049"
+          "Quality": "0.000020125584"
         }
       ],
       "ResponseHeaders": [
@@ -17087,15 +17087,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "45940"
+          "Value": "49687"
         },
         {
           "Name": "ETag",
-          "Value": "\"pBXiObylj17h8Atzay0tGNIN5oy1Yljmhgk580y4B/g=\""
+          "Value": "\"nw/cE+aAf4PMsFL/Oadhr1RS/BU93BBiYBES/lmf3YY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Dec 2025 08:11:23 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17115,24 +17115,24 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"p/9kDgYBSZXoyM3gx8I04VkTNrreENVSG4+VDPYTK8A=\""
+          "Value": "W/\"psfhWA2w56HWY0FYxS65CMVRVSk/nVfYoOs3Ju1lrMM=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-p/9kDgYBSZXoyM3gx8I04VkTNrreENVSG4+VDPYTK8A="
+          "Value": "sha256-psfhWA2w56HWY0FYxS65CMVRVSk/nVfYoOs3Ju1lrMM="
         }
       ]
     },
     {
       "Route": "_framework/VAL.Client.wasm",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ppbaujsrgr-x6ar87d9o5.gz",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ppbaujsrgr-asu67wrrag.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000016930214"
+          "Quality": "0.000015525298"
         }
       ],
       "ResponseHeaders": [
@@ -17142,15 +17142,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "59065"
+          "Value": "64410"
         },
         {
           "Name": "ETag",
-          "Value": "\"2EqZFFNIYvavhRHFmWxSGJ3mfbFmYJu+esQKBWZ5W4A=\""
+          "Value": "\"cn2RN8hnNIfoQ0AGz7KvGBnFf6c54qTRUh3YNoZ8TSM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Dec 2025 08:11:23 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17170,13 +17170,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"p/9kDgYBSZXoyM3gx8I04VkTNrreENVSG4+VDPYTK8A=\""
+          "Value": "W/\"psfhWA2w56HWY0FYxS65CMVRVSk/nVfYoOs3Ju1lrMM=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-p/9kDgYBSZXoyM3gx8I04VkTNrreENVSG4+VDPYTK8A="
+          "Value": "sha256-psfhWA2w56HWY0FYxS65CMVRVSk/nVfYoOs3Ju1lrMM="
         }
       ]
     },
@@ -17191,7 +17191,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "251157"
+          "Value": "274197"
         },
         {
           "Name": "Content-Type",
@@ -17199,11 +17199,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"p/9kDgYBSZXoyM3gx8I04VkTNrreENVSG4+VDPYTK8A=\""
+          "Value": "\"psfhWA2w56HWY0FYxS65CMVRVSk/nVfYoOs3Ju1lrMM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Dec 2025 08:11:23 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17213,13 +17213,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-p/9kDgYBSZXoyM3gx8I04VkTNrreENVSG4+VDPYTK8A="
+          "Value": "sha256-psfhWA2w56HWY0FYxS65CMVRVSk/nVfYoOs3Ju1lrMM="
         }
       ]
     },
     {
       "Route": "_framework/VAL.Client.wasm.br",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ppbaujsrgr-x6ar87d9o5.br",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ppbaujsrgr-asu67wrrag.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -17228,7 +17228,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "45940"
+          "Value": "49687"
         },
         {
           "Name": "Content-Type",
@@ -17236,11 +17236,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pBXiObylj17h8Atzay0tGNIN5oy1Yljmhgk580y4B/g=\""
+          "Value": "\"nw/cE+aAf4PMsFL/Oadhr1RS/BU93BBiYBES/lmf3YY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Dec 2025 08:11:23 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17258,13 +17258,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pBXiObylj17h8Atzay0tGNIN5oy1Yljmhgk580y4B/g="
+          "Value": "sha256-nw/cE+aAf4PMsFL/Oadhr1RS/BU93BBiYBES/lmf3YY="
         }
       ]
     },
     {
       "Route": "_framework/VAL.Client.wasm.gz",
-      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ppbaujsrgr-x6ar87d9o5.gz",
+      "AssetFile": "D:\\ActiveProjs\\VBL.Back\\VAL.Client\\obj\\Release\\net8.0\\compressed\\publish\\ppbaujsrgr-asu67wrrag.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -17273,7 +17273,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "59065"
+          "Value": "64410"
         },
         {
           "Name": "Content-Type",
@@ -17281,11 +17281,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"2EqZFFNIYvavhRHFmWxSGJ3mfbFmYJu+esQKBWZ5W4A=\""
+          "Value": "\"cn2RN8hnNIfoQ0AGz7KvGBnFf6c54qTRUh3YNoZ8TSM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Dec 2025 08:11:23 GMT"
+          "Value": "Sun, 14 Dec 2025 13:35:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17303,7 +17303,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-2EqZFFNIYvavhRHFmWxSGJ3mfbFmYJu+esQKBWZ5W4A="
+          "Value": "sha256-cn2RN8hnNIfoQ0AGz7KvGBnFf6c54qTRUh3YNoZ8TSM="
         }
       ]
     },

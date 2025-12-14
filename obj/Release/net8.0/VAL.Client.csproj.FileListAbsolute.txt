@@ -1044,6 +1044,7 @@ D:\ActiveProjs\VBL.Back\VAL.Client\obj\Release\net8.0\VAL.Client.dll
 D:\ActiveProjs\VBL.Back\VAL.Client\obj\Release\net8.0\refint\VAL.Client.dll
 D:\ActiveProjs\VBL.Back\VAL.Client\obj\Release\net8.0\VAL.Client.pdb
 D:\ActiveProjs\VBL.Back\VAL.Client\obj\Release\net8.0\ref\VAL.Client.dll
-D:\ActiveProjs\VBL.Back\VAL.Client\obj\Release\net8.0\compressed\zlz96sc7vz-x6ar87d9o5.gz
-D:\ActiveProjs\VBL.Back\VAL.Client\obj\Release\net8.0\compressed\q5mh1p5mtd-hvfhdt6hm0.gz
-D:\ActiveProjs\VBL.Back\VAL.Client\obj\Release\net8.0\compressed\stp2cwcgce-euqqko8v0r.gz
+D:\ActiveProjs\VBL.Back\VAL.Client\obj\Release\net8.0\VAL.Client.sourcelink.json
+D:\ActiveProjs\VBL.Back\VAL.Client\obj\Release\net8.0\compressed\zlz96sc7vz-asu67wrrag.gz
+D:\ActiveProjs\VBL.Back\VAL.Client\obj\Release\net8.0\compressed\q5mh1p5mtd-m9dg284xvm.gz
+D:\ActiveProjs\VBL.Back\VAL.Client\obj\Release\net8.0\compressed\stp2cwcgce-hxwmgavvms.gz

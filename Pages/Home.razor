@@ -247,9 +247,9 @@
 </div>
 
 @code {
-    private int dataObjectCount = 0;
-    private int columnCount = 0;
-    private int legacySystemCount = 0;
+    private int? dataObjectCount;
+    private int? columnCount;
+    private int? legacySystemCount;
 
     protected override async Task OnInitializedAsync()
     {

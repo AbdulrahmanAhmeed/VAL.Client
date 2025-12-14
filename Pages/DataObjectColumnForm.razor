@@ -7,6 +7,7 @@
 @inject IDataObjectColumnService DataObjectColumnService
 @inject IDataObjectService DataObjectService
 @inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
 
 <PageTitle>@(IsEditMode ? "Edit Data Object Column" : IsViewMode ? "View Data Object Column" : "Create Data Object Column")</PageTitle>
 
@@ -228,6 +229,17 @@
                     class="rounded-xl border border-slate-300 bg-white py-2.5 px-5 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-200">
                     @(IsViewMode ? "Back" : "Cancel")
                 </button>
+                @if (IsViewMode)
+                {
+                    <button type="button" @onclick='() => NavigationManager.NavigateTo($"dataobjectscolumns/edit/{Id}")'
+                            class="rounded-xl border border-indigo-200 bg-indigo-50 py-2.5 px-5 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-200">
+                        Edit
+                    </button>
+                    <button type="button" @onclick="Delete"
+                            class="rounded-xl border border-red-200 bg-red-50 py-2.5 px-5 text-sm font-semibold text-red-600 shadow-sm hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-all duration-200">
+                        Delete
+                    </button>
+                }
                 @if (!IsViewMode)
                 {
                     <button type="submit" disabled="@saving"
@@ -347,5 +359,21 @@
     private void Cancel()
     {
         NavigationManager.NavigateTo("/dataobjectscolumns");
+    }
+
+    private async Task Delete()
+    {
+        if (await JSRuntime.InvokeAsync<bool>("confirm", "Are you sure you want to delete this data object column?"))
+        {
+            try
+            {
+                await DataObjectColumnService.DeleteAsync(Id!.Value);
+                NavigationManager.NavigateTo("/dataobjectscolumns");
+            }
+            catch (Exception ex)
+            {
+                errorMessage = $"Error deleting column: {ex.Message}";
+            }
+        }
     }
 }

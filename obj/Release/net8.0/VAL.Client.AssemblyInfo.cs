@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VAL.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+486209eebae0af571c00670293b89cbe04080561")]
 [assembly: System.Reflection.AssemblyProductAttribute("VAL.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VAL.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

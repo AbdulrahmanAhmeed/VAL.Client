@@ -1043,6 +1043,7 @@ D:\ActiveProjs\VBL.Back\VAL.Client\obj\Debug\net8.0\VAL.Client.dll
 D:\ActiveProjs\VBL.Back\VAL.Client\obj\Debug\net8.0\refint\VAL.Client.dll
 D:\ActiveProjs\VBL.Back\VAL.Client\obj\Debug\net8.0\VAL.Client.pdb
 D:\ActiveProjs\VBL.Back\VAL.Client\obj\Debug\net8.0\ref\VAL.Client.dll
-D:\ActiveProjs\VBL.Back\VAL.Client\obj\Debug\net8.0\compressed\zlz96sc7vz-fmhuxs897l.gz
-D:\ActiveProjs\VBL.Back\VAL.Client\obj\Debug\net8.0\compressed\q5mh1p5mtd-s0ntkpeuq7.gz
-D:\ActiveProjs\VBL.Back\VAL.Client\obj\Debug\net8.0\compressed\stp2cwcgce-vuav4ayugb.gz
+D:\ActiveProjs\VBL.Back\VAL.Client\obj\Debug\net8.0\VAL.Client.sourcelink.json
+D:\ActiveProjs\VBL.Back\VAL.Client\obj\Debug\net8.0\compressed\zlz96sc7vz-kyqrru91u4.gz
+D:\ActiveProjs\VBL.Back\VAL.Client\obj\Debug\net8.0\compressed\q5mh1p5mtd-437wyil5ox.gz
+D:\ActiveProjs\VBL.Back\VAL.Client\obj\Debug\net8.0\compressed\stp2cwcgce-9i762tnq5o.gz
